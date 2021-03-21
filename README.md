@@ -33,7 +33,7 @@ https://www.az-delivery.de/en/products/0-96zolldisplay)
 
 ### Front
 
-![display front[(
+![display front](
 https://user-images.githubusercontent.com/33422878/37134592-383bf65a-22d4-11e8-8d32-1a8aad043f5f.png)
 
 ### Back
