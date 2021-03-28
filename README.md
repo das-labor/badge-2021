@@ -21,6 +21,10 @@ https://www.az-delivery.de/products/esp32-d1-mini)
 ![ESP32 D1 Mini Pinout](
 https://www.bastelgarage.ch/image/catalog/Artikel/420571-420580/420571-Pinout.jpg)
 
+### Firmware
+
+[MicroPython](https://micropython.org/download/esp32/)
+
 ## OLED I2C Display
 
 **Note**: On the back, we need to solder a bridge on *one* display
@@ -45,3 +49,15 @@ https://user-images.githubusercontent.com/33422878/37134695-a056b0cc-22d4-11e8-8
 
 [https://www.mischianti.org/2020/05/30/esp32-pinout-specs-and-arduino-ide-configuration-part-1/](
 https://www.mischianti.org/2020/05/30/esp32-pinout-specs-and-arduino-ide-configuration-part-1/)
+
+## Demo
+
+[MicroPython SSD1306 OLED Display Scroll and Shapes](
+https://randomnerdtutorials.com/micropython-ssd1306-oled-scroll-shapes-esp32-esp8266/)
+
+### Sources
+
+- [ssd1306.py](
+  https://github.com/RuiSantosdotme/ESP-MicroPython/raw/master/code/Others/OLED/ssd1306.py)
+- [screen_scroll.py](
+https://github.com/RuiSantosdotme/Random-Nerd-Tutorials/raw/master/Projects/ESP-MicroPython/oled/screen_scroll.py)
