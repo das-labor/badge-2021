@@ -9,6 +9,10 @@ http://www.openhardwareconf.org/images/thumb/e/e7/Swag_badge_render_2020-09-30.j
 
 [Swag Badge schematics](https://github.com/CCHS-Melbourne/Swag-Badge)
 
+## Sketch
+
+![Badge](badge.svg)
+
 ## ESP32 D1 Mini
 
 ### Buy
