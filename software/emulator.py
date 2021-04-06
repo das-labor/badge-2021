@@ -60,6 +60,13 @@ class SSD1306(FrameBuffer):
         buffer = bytearray(self.pages * width)
         super().__init__(buffer, width, height)
 
+    def init_display(self): pass
+    def poweroff(self): pass
+    def poweron(self): pass
+    def contrast(self, contrast): pass
+    def invert(self, invert):
+        assert False, "Not Implemented"
+
     def show(self):
         # clear event queue
         for event in pygame.event.get():
@@ -74,3 +81,6 @@ class SSD1306_I2C(SSD1306):
     def __init__(self, width=128, height=64, i2c=None, addr=0x3C, external_vcc=False):
         super().__init__(width, height, external_vcc)
         self.i2c = i2c
+
+    def write_cmd(self, cmd): pass
+    def write_data(self, buf): pass
