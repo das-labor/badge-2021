@@ -1,6 +1,5 @@
 from emulator import SSD1306_I2C
-import random
-import time
+import random # use os.urandom() on the board http://docs.micropython.org/en/latest/library/uos.html?highlight=uos#uos.urandom
 
 BLACK = (0,0,0)
 WHITE = (255,255,255)
