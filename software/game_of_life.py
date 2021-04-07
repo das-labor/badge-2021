@@ -1,9 +1,24 @@
 from emulator import SSD1306_I2C
-import random # use os.urandom() on the board http://docs.micropython.org/en/latest/library/uos.html?highlight=uos#uos.urandom
 
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 GREEN = (0, 200, 0)
+
+def rng():
+    'Return a pseudo random byte value'
+    try:
+        import os
+        # http://docs.micropython.org/en/latest/library/uos.html?highlight=uos#uos.urandom
+        os.urandom(1)[0]
+    except:
+        print('unable to use urandom. Trying other RNG')
+
+    try:
+        import random
+        return random.randbytes(1)[0]
+    except:
+        print('Unable to use randbytes')
+
 
 class GameOfLife:
     """Conway's Game of Life"""
@@ -26,8 +41,8 @@ class GameOfLife:
         for i in range(
             int(self.oled.width * self.oled.height * GameOfLife.INTITIAL_CELL_COVERAGE)):
 
-            x = random.randint(0, self.oled.width - 1)
-            y = random.randint(0, self.oled.height - 1)
+            x = int(rng() / 255 * (self.oled.width-1))
+            y = int(rng() / 255 * (self.oled.height-1))
             self.cells[x][y] = 1
 
     def _iterate(self):
