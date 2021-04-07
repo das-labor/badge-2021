@@ -7,9 +7,9 @@ GREEN = (0, 200, 0)
 def rng():
     'Return a pseudo random byte value'
     try:
-        import os
         # http://docs.micropython.org/en/latest/library/uos.html?highlight=uos#uos.urandom
-        os.urandom(1)[0]
+        import os
+        return os.urandom(1)[0]
     except:
         print('unable to use urandom. Trying other RNG')
 
