@@ -3,7 +3,8 @@ import pygame
 
 class FrameBuffer:
     'Framebuffer as in http://docs.micropython.org/en/latest/library/framebuf.html'
-
+    # no colors allowed - using VLSB format
+    # http://docs.micropython.org/en/latest/library/framebuf.html#framebuf.framebuf.MONO_VLSB
     def __init__(self, buffer, width, height, format=None):
         self.buffer = buffer
         self.width = width
@@ -19,7 +20,7 @@ class FrameBuffer:
         self.fill_rect(0,0, self.width, self.height, c)
 
     def pixel(self, x, y, c=None):
-        self.virt_screen.set_at((x,y), c)
+        self.virt_screen.set_at((x,y), self.__pygame_color(c))
 
     def hline(self, x, y, w, c):
         self.line(x,y, x+w, y, c)
@@ -28,19 +29,22 @@ class FrameBuffer:
         self.line(x,y,x,y+h, c)
         
     def line(self, x1, y1, x2, y2, c):
-        pygame.draw.line(self.virt_screen, c, (x1,y1), (x2,y2))
+        pygame.draw.line(self.virt_screen, self.__pygame_color(c), 
+            (x1,y1), (x2,y2))
 
     def rect(self, x, y, w, h, c):
-        pygame.draw.rect(self.virt_screen, c, (x,y,w,h), width=1)
+        pygame.draw.rect(self.virt_screen, self.__pygame_color(c), 
+            (x,y,w,h), width=1)
 
     def fill_rect(self, x, y, w, h, c):
-        pygame.draw.rect(self.virt_screen, c, (x,y,w,h), width=0)
+        pygame.draw.rect(self.virt_screen, self.__pygame_color(c), 
+            (x,y,w,h), width=0)
 
     def text(self, s, x, y, c=None):
         fontsize = 10
         font = pygame.font.Font(pygame.font.get_default_font(), fontsize)
         antialias = True
-        surf = font.render(s, antialias, c)
+        surf = font.render(s, antialias, self.__pygame_color(c))
         self.virt_screen.blit(surf, (x,y))
 
     def scroll(self, xstep, ystep):
@@ -50,6 +54,10 @@ class FrameBuffer:
         #assert False, "Not Implemented"
         self.virt_screen.blit(fbuf.virt_screen, (x,y))
 
+    def __pygame_color(self, c):
+        'return a pygame color value for the given monochrome color value'
+        if c: return (255,255,255)
+        else: return (0,0,0)
 
 class SSD1306(FrameBuffer):
     'taken from https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py'
