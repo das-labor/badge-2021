@@ -13,6 +13,7 @@ def handle_px(t, x, y):
 
 i = 0
 oled = SSD1306_I2C(addr=0x78)
+oled.contrast(200)
 
 while True:
     t = time.time()
