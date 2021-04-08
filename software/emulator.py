@@ -56,7 +56,7 @@ class FrameBuffer:
 
     def __pygame_color(self, c):
         'return a pygame color value for the given monochrome color value'
-        if c: return (255,255,255)
+        if c: return (self._contrast,self._contrast,self._contrast)
         else: return (0,0,0)
 
 class SSD1306(FrameBuffer):
@@ -65,13 +65,15 @@ class SSD1306(FrameBuffer):
     def __init__(self, width=128, height=64, external_vcc=None):
         self.external_vcc = external_vcc
         self.pages = height // 8
+        self._contrast = 255
         buffer = bytearray(self.pages * width)
         super().__init__(buffer, width, height)
 
     def init_display(self): pass
     def poweroff(self): pass
     def poweron(self): pass
-    def contrast(self, contrast): pass
+    def contrast(self, contrast): 
+        self._contrast=contrast
     def invert(self, invert):
         assert False, "Not Implemented"
 
