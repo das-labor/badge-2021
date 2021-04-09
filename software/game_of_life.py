@@ -1,8 +1,7 @@
 from emulator import SSD1306_I2C
 
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-GREEN = (0, 200, 0)
+BLACK = 0
+WHITE = 1
 
 def rng():
     'Return a pseudo random byte value'
@@ -85,7 +84,7 @@ class GameOfLife:
 
     def handle_px(self, x, y):
         if self.cells[x][y]==1:
-            color = GREEN
+            color = WHITE
         else:
             color = BLACK
 
