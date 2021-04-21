@@ -51,7 +51,6 @@ class FrameBuffer:
         self.virt_screen.scroll(xstep, ystep)
     
     def blit(self, fbuf, x, y, key=None):
-        #assert False, "Not Implemented"
         self.virt_screen.blit(fbuf.virt_screen, (x,y))
 
     def __pygame_color(self, c):
