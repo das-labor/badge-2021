@@ -19,7 +19,7 @@ U 1 1 60571487
 P 5700 3550
 F 0 "J3" H 5780 3542 50  0000 L CNN
 F 1 "I2C OLED 1" H 5780 3451 50  0000 L CNN
-F 2 "" H 5700 3550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5700 3550 50  0001 C CNN
 F 3 "~" H 5700 3550 50  0001 C CNN
 	1    5700 3550
 	1    0    0    -1  
@@ -34,7 +34,7 @@ U 1 1 6057F981
 P 4400 3500
 F 0 "J2" H 4480 3492 50  0000 L CNN
 F 1 "I2C OLED 2" H 4480 3401 50  0000 L CNN
-F 2 "" H 4400 3500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4400 3500 50  0001 C CNN
 F 3 "~" H 4400 3500 50  0001 C CNN
 	1    4400 3500
 	1    0    0    -1  
@@ -93,7 +93,7 @@ U 1 1 605B25EB
 P 4000 4850
 F 0 "J1" H 4050 5467 50  0000 C CNN
 F 1 "Conn_02x10_Odd_Even" H 4050 5376 50  0000 C CNN
-F 2 "" H 4000 4850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 4000 4850 50  0001 C CNN
 F 3 "~" H 4000 4850 50  0001 C CNN
 	1    4000 4850
 	1    0    0    -1  
@@ -104,7 +104,7 @@ U 1 1 605B68E1
 P 6550 4850
 F 0 "J4" H 6600 5467 50  0000 C CNN
 F 1 "Conn_02x10_Odd_Even" H 6600 5376 50  0000 C CNN
-F 2 "" H 6550 4850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 6550 4850 50  0001 C CNN
 F 3 "~" H 6550 4850 50  0001 C CNN
 	1    6550 4850
 	1    0    0    -1  
@@ -206,7 +206,6 @@ NoConn ~ 3800 5250
 NoConn ~ 3800 5150
 NoConn ~ 3800 4950
 NoConn ~ 3800 4850
-NoConn ~ 3800 4750
 NoConn ~ 3800 4650
 NoConn ~ 3800 4550
 NoConn ~ 6350 4850
@@ -259,7 +258,7 @@ U 1 1 60696D20
 P 4400 2850
 F 0 "J5" H 4480 2842 50  0000 L CNN
 F 1 "I2C OLED 2" H 4480 2751 50  0000 L CNN
-F 2 "" H 4400 2850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4400 2850 50  0001 C CNN
 F 3 "~" H 4400 2850 50  0001 C CNN
 	1    4400 2850
 	1    0    0    -1  
@@ -349,7 +348,7 @@ U 1 1 606DEF35
 P 4400 1700
 F 0 "J6" H 4480 1692 50  0000 L CNN
 F 1 "Conn_01x08" H 4480 1601 50  0000 L CNN
-F 2 "" H 4400 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4400 1700 50  0001 C CNN
 F 3 "~" H 4400 1700 50  0001 C CNN
 	1    4400 1700
 	1    0    0    -1  
@@ -360,7 +359,7 @@ U 1 1 606E02EA
 P 6350 1700
 F 0 "J7" H 6430 1692 50  0000 L CNN
 F 1 "Conn_01x08" H 6430 1601 50  0000 L CNN
-F 2 "" H 6350 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6350 1700 50  0001 C CNN
 F 3 "~" H 6350 1700 50  0001 C CNN
 	1    6350 1700
 	1    0    0    -1  
@@ -476,4 +475,100 @@ Wire Wire Line
 	6850 4950 7000 4950
 Wire Wire Line
 	7000 5050 6850 5050
+$Comp
+L Device:LED D1
+U 1 1 6076164F
+P 2450 5000
+F 0 "D1" V 2489 4882 50  0000 R CNN
+F 1 "LED" V 2398 4882 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 2450 5000 50  0001 C CNN
+F 3 "~" H 2450 5000 50  0001 C CNN
+F 4 "0.10" V 2450 5000 50  0001 C CNN "Preis"
+	1    2450 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 607637E0
+P 2450 5450
+F 0 "R1" H 2520 5496 50  0000 L CNN
+F 1 "R" H 2520 5405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2380 5450 50  0001 C CNN
+F 3 "~" H 2450 5450 50  0001 C CNN
+	1    2450 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 6076EC24
+P 2450 5750
+F 0 "#PWR07" H 2450 5500 50  0001 C CNN
+F 1 "GND" H 2455 5577 50  0000 C CNN
+F 2 "" H 2450 5750 50  0001 C CNN
+F 3 "" H 2450 5750 50  0001 C CNN
+	1    2450 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5750 2450 5600
+Wire Wire Line
+	2450 4850 2450 4750
+Wire Wire Line
+	2450 4750 3800 4750
+Wire Wire Line
+	2450 5300 2450 5150
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 609F3BAA
+P 1100 6600
+F 0 "H1" H 1200 6646 50  0000 L CNN
+F 1 "MountingHole" H 1200 6555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.3mm_M5_DIN965_Pad" H 1100 6600 50  0001 C CNN
+F 3 "~" H 1100 6600 50  0001 C CNN
+	1    1100 6600
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	900  6350 4000 6350
+Wire Notes Line
+	4000 6350 4000 7600
+Wire Notes Line
+	4000 7600 900  7600
+Wire Notes Line
+	900  7600 900  6350
+Text Notes 950  6450 0    50   ~ 0
+Mech
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 609F9441
+P 1100 6850
+F 0 "H2" H 1200 6896 50  0000 L CNN
+F 1 "MountingHole" H 1200 6805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.3mm_M5_DIN965_Pad" H 1100 6850 50  0001 C CNN
+F 3 "~" H 1100 6850 50  0001 C CNN
+	1    1100 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 609F9647
+P 1100 7100
+F 0 "H3" H 1200 7146 50  0000 L CNN
+F 1 "MountingHole" H 1200 7055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.3mm_M5_DIN965_Pad" H 1100 7100 50  0001 C CNN
+F 3 "~" H 1100 7100 50  0001 C CNN
+	1    1100 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 609F9915
+P 1100 7350
+F 0 "H4" H 1200 7396 50  0000 L CNN
+F 1 "MountingHole" H 1200 7305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_5.3mm_M5_DIN965_Pad" H 1100 7350 50  0001 C CNN
+F 3 "~" H 1100 7350 50  0001 C CNN
+	1    1100 7350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
