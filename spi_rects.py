@@ -22,7 +22,7 @@ spi = SPI(
 
 # tft = TFT(spi, aDC=27, aReset=26, aCS=14)
 tft1 = TFT(spi, aDC=16, aReset=17, aCS=23)
-tft2 = TFT(spi, aDC=16, aReset=26, aCS=18)
+tft2 = TFT(spi, aDC=16, aReset=19, aCS=18)
 
 ## init
 tft1.initr()
