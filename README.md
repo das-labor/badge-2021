@@ -25,6 +25,25 @@ https://www.az-delivery.de/products/esp32-d1-mini)
 ![ESP32 D1 Mini Pinout](
 https://www.bastelgarage.ch/image/catalog/Artikel/420571-420580/420571-Pinout.jpg)
 
+The [ESP32 has VDET pins](https://www.esp32.com/viewtopic.php?t=187) which can
+be used for ADC.
+
+#### Joysticks
+
+PS2 joysticks and corresponding caps are [available from Amazon](
+https://www.amazon.de/-/en/Replacement-DualShock-Controller-Playstation-Screwdriver/dp/B07R7TM177/)
+and probably other sources as well.
+
+The Freetronics Kicad library [has a model for it](
+https://github.com/freetronics/freetronics_kicad_library/blob/master/freetronics_footprints.pretty/JOYSTICK_W_BUTTON.kicad_mod).
+
+They have two potentiometers for the two dimensions each, so we assign GPIO pins
+to them:
+
+| joystick 1 | joystick 2 |
+| ---------- | ---------- |
+| IO32, IO34 | IO33, IO35 |
+
 ### Firmware
 
 [MicroPython](https://micropython.org/download/esp32/)
