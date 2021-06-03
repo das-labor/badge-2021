@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name freetronics_schematic)(type Legacy)(uri ${KIPRJMOD}/freetronics_schematic.lib)(options "")(descr ""))
+)
