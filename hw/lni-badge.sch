@@ -18,7 +18,7 @@ L Connector_Generic:Conn_01x04 J5
 U 1 1 60571487
 P 3900 1800
 F 0 "J5" H 3980 1792 50  0000 L CNN
-F 1 "I2C OLED 1" H 3980 1701 50  0000 L CNN
+F 1 "I2C OLED 2" H 3980 1701 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3900 1800 50  0001 C CNN
 F 3 "~" H 3900 1800 50  0001 C CNN
 	1    3900 1800
@@ -33,7 +33,7 @@ L Connector_Generic:Conn_01x04 J3
 U 1 1 6057F981
 P 3900 1100
 F 0 "J3" H 3980 1092 50  0000 L CNN
-F 1 "I2C OLED 2" H 3980 1001 50  0000 L CNN
+F 1 "I2C OLED 1" H 3980 1001 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3900 1100 50  0001 C CNN
 F 3 "~" H 3900 1100 50  0001 C CNN
 	1    3900 1100
@@ -235,7 +235,7 @@ L Connector_Generic:Conn_01x04 J1
 U 1 1 60696D20
 P 9300 3550
 F 0 "J1" H 9380 3542 50  0000 L CNN
-F 1 "I2C OLED 2" H 9380 3451 50  0000 L CNN
+F 1 "PROG" H 9380 3451 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9300 3550 50  0001 C CNN
 F 3 "~" H 9300 3550 50  0001 C CNN
 	1    9300 3550
@@ -671,13 +671,13 @@ Wire Wire Line
 	10500 1300 10700 1300
 Wire Wire Line
 	7900 5100 8250 5100
-Text Label 8250 5100 0    50   ~ 0
+Text Label 10500 5150 0    50   ~ 0
 DAC_2
 Text Label 8850 2100 0    50   ~ 0
 DAC_2
 Wire Wire Line
 	10350 5150 10500 5150
-Text Label 10500 5150 0    50   ~ 0
+Text Label 8250 5100 0    50   ~ 0
 DAC_1
 Text Label 8850 1300 0    50   ~ 0
 DAC_1
@@ -1620,13 +1620,13 @@ Wire Wire Line
 	5100 4450 5450 4450
 Text Label 8250 5500 0    50   ~ 0
 But_JOYST_A
-Text Label 10500 5250 0    50   ~ 0
+Text Label 6850 5300 0    50   ~ 0
 JOYST_A_X
 Text Label 6850 5400 0    50   ~ 0
 JOYST_A_Y
 Text Label 10500 5350 0    50   ~ 0
 But_JOYST_B
-Text Label 6850 5300 0    50   ~ 0
+Text Label 10500 5250 0    50   ~ 0
 JOYST_B_X
 Text Label 6850 5200 0    50   ~ 0
 JOYST_B_Y
