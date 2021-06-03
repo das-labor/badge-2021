@@ -15,6 +15,9 @@ http://www.openhardwareconf.org/images/thumb/e/e7/Swag_badge_render_2020-09-30.j
 
 ## ESP32 D1 Mini
 
+The data sheet and documentation for the ESP32-WROOM-32 is [publicly available](
+https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf).
+
 ### Buy
 
 [https://www.az-delivery.de/products/esp32-d1-mini](
