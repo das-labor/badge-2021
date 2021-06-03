@@ -1,9 +1,24 @@
 # Adapted from
 # https://github.com/boochow/MicroPython-ST7735/blob/master/tftbmp.py
+# and
+# https://randomnerdtutorials.com/esp32-esp8266-analog-readings-micropython/
 
-from machine import Pin, SPI
+from machine import Pin, ADC, SPI
 import time
 from ST7735 import TFT, TFTColor
+
+# joystick l h
+jlh = ADC(Pin(32))
+jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
+
+# joystick l v
+jlv = ADC(Pin(34))
+jlv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
+
+## ADC.WIDTH_9BIT: range 0 to 511
+## ADC.WIDTH_10BIT: range 0 to 1023
+## ADC.WIDTH_11BIT: range 0 to 2047
+## ADC.WIDTH_12BIT: range 0 to 4095
 
 # from https://forum.micropython.org/viewtopic.php?t=5677
 # is it any better?
@@ -51,3 +66,28 @@ tft2.fillrect([40,50], [25,15], TFT.GREEN)
 tft2.fillrect([50,70], [25,15], TFT.RED)
 tft2.fillrect([60,90], [25,15], TFT.BLUE)
 tft2.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
+
+time.sleep_us(500000)
+
+x = 50
+y = 50
+
+while True:
+  xd = jlh.read()
+  yd = jlv.read()
+  print(xd)
+  print(yd)
+  x = x + (xd-1024) / 100
+  if x < 27:
+    x = 27
+  if x > 85:
+    x = 85
+  y = y + (yd-1024) / 100
+  if y < 2:
+    y = 2
+  if y > 140:
+    y = 140
+  tft2.fill(TFT.BLACK)
+  tft2.rect([26,1], [80,160], TFT.PURPLE)
+  tft2.rect([x,y], [20,20], TFT.BLUE)
+  time.sleep_us(500)
