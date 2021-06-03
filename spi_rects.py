@@ -77,12 +77,12 @@ while True:
   yd = jlv.read()
   print(xd)
   print(yd)
-  x = x + (xd-1024) / 100
+  x = x + (xd-1580) / 100
   if x < 27:
     x = 27
   if x > 85:
     x = 85
-  y = y + (yd-1024) / 100
+  y = y + (yd-1770) / 100
   if y < 2:
     y = 2
   if y > 140:
