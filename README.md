@@ -47,6 +47,11 @@ to them:
 | ---------- | ---------- |
 | IO32, IO34 | IO33, IO35 |
 
+#### Buttons
+
+There are many suitable buttone, such as retro style [arcade tactile push buttons](
+https://www.amazon.de/-/en/dp/B07WPBQXJ9).
+
 ### Firmware
 
 [MicroPython](https://micropython.org/download/esp32/)
