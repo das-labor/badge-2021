@@ -49,8 +49,10 @@ to them:
 
 #### Buttons
 
-There are many suitable buttone, such as retro style [arcade tactile push buttons](
-https://www.amazon.de/-/en/dp/B07WPBQXJ9).
+There are many suitable and colorful [6x6 buttons, tall and high](
+https://www.amazon.de/-/en/dp/B087R5XYJW/).
+With some PCB adjustment, larger [12x12 retro arcade style tactile
+push buttons](https://www.amazon.de/-/en/dp/B07WPBQXJ9) could fit.
 
 ### Firmware
 
