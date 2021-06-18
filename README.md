@@ -11,6 +11,8 @@ http://www.openhardwareconf.org/images/thumb/e/e7/Swag_badge_render_2020-09-30.j
 
 ## PCB
 
+Size (rounded): 94mm x 130mm
+
 ![Badge](badge.png)
 
 ## ESP32 D1 Mini
