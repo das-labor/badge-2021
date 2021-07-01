@@ -89,5 +89,5 @@ while True:
     y = 140
   tft2.fill(TFT.BLACK)
   tft2.rect([26,1], [80,160], TFT.PURPLE)
-  tft2.rect([x,y], [20,20], TFT.BLUE)
+  tft2.fillrect([x,y], [20,20], TFT.BLUE)
   time.sleep_us(500)
