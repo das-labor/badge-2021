@@ -7,13 +7,19 @@ from machine import Pin, ADC, SPI
 import time
 from ST7735 import TFT, TFTColor
 
-# joystick l h
-jlh = ADC(Pin(32))
+# joystick r v
+jlh = ADC(Pin(33))
 jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
-
-# joystick l v
+# joystick r h
 jlv = ADC(Pin(34))
 jlv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
+
+# joystick r v
+jrh = ADC(Pin(32))
+jrh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
+# joystick r h
+jrv = ADC(Pin(35))
+jrv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 
 ## ADC.WIDTH_9BIT: range 0 to 511
 ## ADC.WIDTH_10BIT: range 0 to 1023
@@ -69,25 +75,53 @@ tft2.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
 
 time.sleep_us(500000)
 
-x = 50
-y = 50
+# left pos and joystick offset
+xl = 50
+yl = 50
+hl_off = -195 # TODO
+vl_off = -384 # TODO
+
+# right pos and joystick offset
+xr = 50
+yr = 50
+hr_off = -195
+vr_off = -384
 
 while True:
-  xd = jlh.read()
-  yd = jlv.read()
-  print(xd)
-  print(yd)
-  x = x + (xd-1580) / 100
-  if x < 27:
-    x = 27
-  if x > 85:
-    x = 85
-  y = y + (yd-1770) / 100
-  if y < 2:
-    y = 2
-  if y > 140:
-    y = 140
-  tft2.fill(TFT.BLACK)
-  tft2.rect([26,1], [80,160], TFT.PURPLE)
-  tft2.fillrect([x,y], [20,20], TFT.BLUE)
+  xrr = jrh.read() #
+  yrr = jrv.read() #
+  xrd = (xrr - (2048 + hr_off)) / 100
+  yrd = (yrr - (2048 + vr_off)) / 100
+  xlr = jlh.read() #  15.48  1853.52  4079.52
+  ylr = jlv.read() #  17.48  1664.52  4077.52
+  xld = (xlr - (2048 + hl_off)) / 100
+  yld = (ylr - (2048 + vl_off)) / 100
+  if abs(xld) > 3 or abs(yld) > 3:
+      xl = xl - xld # joystick is inverted
+      yl = yl - yld # joystick is inverted
+      if xl < 27:
+        xl = 27
+      if xl > 85:
+        xl = 85
+      if yl < 2:
+        yl = 2
+      if yl > 140:
+        yl = 140
+      tft1.fill(TFT.BLACK)
+      tft1.rect([26,1], [80,160], TFT.PURPLE)
+      tft1.fillrect([xl,yl], [20,20], TFT.GREEN)
+  if abs(xrd) > 3 or abs(yrd) > 3:
+      xr = xr + xrd
+      yr = yr + yrd
+      if xr < 27:
+        xr = 27
+      if xr > 85:
+        xr = 85
+      if yr < 2:
+        yr = 2
+      if yr > 140:
+        yr = 140
+      tft2.fill(TFT.BLACK)
+      tft2.rect([26,1], [80,160], TFT.PURPLE)
+      tft2.fillrect([xr,yr], [20,20], TFT.BLUE)
   time.sleep_us(500)
