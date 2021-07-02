@@ -1,19 +1,31 @@
 # Badge Labortage/LNI 2021
 
-## Idea: based on Dagbadge/Swagbadge
+## Idea: based on Swag Badge
 
-[Dagbadge](http://www.openhardwareconf.org/wiki/Swagbadge2021_Dagbadge)
+The idea for this year's Labor badge is based on the Swag Badge from the
+[Open Hardware Miniconf at linux.conf.au 2021](
+https://linux.conf.au/programme/miniconfs/open-hardware/).
 
-![Swagbadge](
+![Swag badge](
 http://www.openhardwareconf.org/images/thumb/e/e7/Swag_badge_render_2020-09-30.jpg/360px-Swag_badge_render_2020-09-30.jpg)
 
-[Swag Badge schematics](https://github.com/CCHS-Melbourne/Swag-Badge)
+They also released a DIY version named [Dag Badge](
+http://www.openhardwareconf.org/wiki/Swagbadge2021_Dagbadge) as well as the
+[Swag Badge schematics](https://github.com/CCHS-Melbourne/Swag-Badge).
 
 ## PCB
+
+This is our own PCB design. We will offer a basic kit with the PCB itself, the
+ESP32 D1 Mini board, 2 OLED displays, and 2 push buttons, to keep it simple and
+inexpensive. Anyone can purchase the additional parts if they like and we may
+have some left over from testing, and of course, feel free to fork and rework
+the PCB as you like, print it yourself, file PRs, or just leave some feedback.
 
 Size (rounded): 94mm x 130mm
 
 ![Badge](badge.png)
+
+See the [schematics](hw/schematics.pdf) for details.
 
 ## ESP32 D1 Mini
 
