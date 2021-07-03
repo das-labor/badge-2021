@@ -877,18 +877,6 @@ Wire Notes Line
 Text Notes 3500 5900 0    50   ~ 0
 Prototyping area
 $Comp
-L Mechanical:MountingHole_Pad H5
-U 1 1 60B9A893
-P 3600 6100
-F 0 "H5" H 3700 6149 50  0000 L CNN
-F 1 "MountingHole_Pad" H 3700 6058 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 3600 6100 50  0001 C CNN
-F 3 "~" H 3600 6100 50  0001 C CNN
-	1    3600 6100
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3600 6200
-$Comp
 L Switch:SW_Push SW1
 U 1 1 60BA1B76
 P 1400 950
@@ -1032,90 +1020,6 @@ Wire Wire Line
 	10500 5650 10350 5650
 Text Label 10500 5650 0    50   ~ 0
 But_B
-$Comp
-L Mechanical:MountingHole_Pad H6
-U 1 1 60C045E4
-P 3600 6450
-F 0 "H6" H 3700 6499 50  0000 L CNN
-F 1 "MountingHole_Pad" H 3700 6408 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 3600 6450 50  0001 C CNN
-F 3 "~" H 3600 6450 50  0001 C CNN
-	1    3600 6450
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3600 6550
-$Comp
-L Mechanical:MountingHole_Pad H7
-U 1 1 60C095C1
-P 3600 6800
-F 0 "H7" H 3700 6849 50  0000 L CNN
-F 1 "MountingHole_Pad" H 3700 6758 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 3600 6800 50  0001 C CNN
-F 3 "~" H 3600 6800 50  0001 C CNN
-	1    3600 6800
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3600 6900
-$Comp
-L Mechanical:MountingHole_Pad H8
-U 1 1 60C0E56A
-P 3600 7150
-F 0 "H8" H 3700 7199 50  0000 L CNN
-F 1 "MountingHole_Pad" H 3700 7108 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 3600 7150 50  0001 C CNN
-F 3 "~" H 3600 7150 50  0001 C CNN
-	1    3600 7150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3600 7250
-$Comp
-L Mechanical:MountingHole_Pad H9
-U 1 1 60C134BB
-P 4600 6100
-F 0 "H9" H 4700 6149 50  0000 L CNN
-F 1 "MountingHole_Pad" H 4700 6058 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 4600 6100 50  0001 C CNN
-F 3 "~" H 4600 6100 50  0001 C CNN
-	1    4600 6100
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4600 6200
-$Comp
-L Mechanical:MountingHole_Pad H10
-U 1 1 60C183BA
-P 4600 6450
-F 0 "H10" H 4700 6499 50  0000 L CNN
-F 1 "MountingHole_Pad" H 4700 6408 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 4600 6450 50  0001 C CNN
-F 3 "~" H 4600 6450 50  0001 C CNN
-	1    4600 6450
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4600 6550
-$Comp
-L Mechanical:MountingHole_Pad H11
-U 1 1 60C1D3FB
-P 4600 6800
-F 0 "H11" H 4700 6849 50  0000 L CNN
-F 1 "MountingHole_Pad" H 4700 6758 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 4600 6800 50  0001 C CNN
-F 3 "~" H 4600 6800 50  0001 C CNN
-	1    4600 6800
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4600 6900
-$Comp
-L Mechanical:MountingHole_Pad H12
-U 1 1 60C22384
-P 4600 7150
-F 0 "H12" H 4700 7199 50  0000 L CNN
-F 1 "MountingHole_Pad" H 4700 7108 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm_Pad_TopBottom" H 4600 7150 50  0001 C CNN
-F 3 "~" H 4600 7150 50  0001 C CNN
-	1    4600 7150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4600 7250
 $Comp
 L power:GND #PWR030
 U 1 1 60C367A6
@@ -1794,4 +1698,66 @@ Wire Notes Line
 	11100 600  11100 2300
 Wire Notes Line
 	4700 600  11100 600 
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J10
+U 1 1 60E1CC00
+P 3950 6700
+F 0 "J10" H 4000 7317 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 4000 7226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 3950 6700 50  0001 C CNN
+F 3 "~" H 3950 6700 50  0001 C CNN
+	1    3950 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J11
+U 1 1 60E1F3C3
+P 5000 6700
+F 0 "J11" H 5050 7317 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 5050 7226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 5000 6700 50  0001 C CNN
+F 3 "~" H 5000 6700 50  0001 C CNN
+	1    5000 6700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3750 6300
+NoConn ~ 3750 6400
+NoConn ~ 3750 6500
+NoConn ~ 3750 6600
+NoConn ~ 3750 6700
+NoConn ~ 3750 6800
+NoConn ~ 3750 6900
+NoConn ~ 3750 7000
+NoConn ~ 3750 7100
+NoConn ~ 3750 7200
+NoConn ~ 4250 7200
+NoConn ~ 4250 7100
+NoConn ~ 4250 7000
+NoConn ~ 4250 6900
+NoConn ~ 4250 6800
+NoConn ~ 4250 6700
+NoConn ~ 4250 6600
+NoConn ~ 4250 6500
+NoConn ~ 4250 6400
+NoConn ~ 4250 6300
+NoConn ~ 4800 6300
+NoConn ~ 4800 6400
+NoConn ~ 4800 6500
+NoConn ~ 4800 6600
+NoConn ~ 4800 6700
+NoConn ~ 4800 6800
+NoConn ~ 4800 6900
+NoConn ~ 4800 7000
+NoConn ~ 4800 7100
+NoConn ~ 4800 7200
+NoConn ~ 5300 6300
+NoConn ~ 5300 6400
+NoConn ~ 5300 6500
+NoConn ~ 5300 6600
+NoConn ~ 5300 6700
+NoConn ~ 5300 6800
+NoConn ~ 5300 6900
+NoConn ~ 5300 7000
+NoConn ~ 5300 7100
+NoConn ~ 5300 7200
 $EndSCHEMATC
