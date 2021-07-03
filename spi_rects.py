@@ -7,17 +7,17 @@ from machine import Pin, ADC, SPI
 import time
 from ST7735 import TFT, TFTColor
 
-# joystick r v
+# joystick left vertical
 jlh = ADC(Pin(33))
 jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
-# joystick r h
+# joystick left horizontal
 jlv = ADC(Pin(34))
 jlv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 
-# joystick r v
+# joystick right vertical
 jrh = ADC(Pin(32))
 jrh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
-# joystick r h
+# joystick right horizontal
 jrv = ADC(Pin(35))
 jrv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 
