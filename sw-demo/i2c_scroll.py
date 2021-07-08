@@ -85,40 +85,42 @@ def scroll_screen_in_out_v(screen):
     if i!= oled_height:
       oled.fill(0)
 
-while True:
-
-  # Scroll in, stop, scroll out (horizontal)
-  scroll_in_screen(screen1)
-  sleep(2)
-  scroll_out_screen(4)
+def loop():
+# # Scroll in, stop, scroll out (horizontal)
+# scroll_in_screen(screen1)
+# sleep(2)
+# scroll_out_screen(4)
 
   scroll_in_screen(screen2)
   sleep(2)
   scroll_out_screen(4)
 
-  scroll_in_screen(screen3)
-  sleep(2)
-  scroll_out_screen(4)
+# scroll_in_screen(screen3)
+# sleep(2)
+# scroll_out_screen(4)
 
-  # Continuous horizontal scroll
-  scroll_screen_in_out(screen1)
-  scroll_screen_in_out(screen2)
-  scroll_screen_in_out(screen3)
+# # Continuous horizontal scroll
+# scroll_screen_in_out(screen1)
+# scroll_screen_in_out(screen2)
+# scroll_screen_in_out(screen3)
 
-  # Scroll in, stop, scroll out (vertical)
-  scroll_in_screen_v(screen1)
-  sleep(2)
-  scroll_out_screen_v(4)
+# # Scroll in, stop, scroll out (vertical)
+# scroll_in_screen_v(screen1)
+# sleep(2)
+# scroll_out_screen_v(4)
 
-  scroll_in_screen_v(screen2)
-  sleep(2)
-  scroll_out_screen_v(4)
+# scroll_in_screen_v(screen2)
+# sleep(2)
+# scroll_out_screen_v(4)
 
   scroll_in_screen_v(screen3)
   sleep(2)
   scroll_out_screen_v(4)
 
-  # Continuous verticall scroll
-  scroll_screen_in_out_v(screen1)
-  scroll_screen_in_out_v(screen2)
-  scroll_screen_in_out_v(screen3)
+# # Continuous verticall scroll
+# scroll_screen_in_out_v(screen1)
+# scroll_screen_in_out_v(screen2)
+# scroll_screen_in_out_v(screen3)
+
+
+loop()
