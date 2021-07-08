@@ -1,0 +1,11 @@
+### Module positions - created on Mon Jul  5 21:47:29 2021 ###
+### Printed by Pcbnew version kicad 5.1.10
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val        Package                                           PosX       PosY       Rot  Side
+R6        27         R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    25.4000    57.8860  270.0000  top
+R12       27         R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    80.7460   109.2200  180.0000  top
+R15       27         R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    14.2240   107.6960   90.0000  top
+R20       27         R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    80.2900   114.8080    0.0000  top
+TP1       TestPoint  TestPoint_Pad_D1.0mm                           38.1000    89.9160    0.0000  top
+## End

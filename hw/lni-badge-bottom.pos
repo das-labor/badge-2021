@@ -1,0 +1,32 @@
+### Module positions - created on Mon Jul  5 21:47:29 2021 ###
+### Printed by Pcbnew version kicad 5.1.10
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val       Package                                           PosX       PosY       Rot  Side
+C1        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    22.8985     9.1440  180.0000  bottom
+C2        4.7uF     C_1210_3225Metric_Pad1.33x2.70mm_HandSolder    44.1960    28.4095   90.0000  bottom
+C3        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    19.2655    55.3720  180.0000  bottom
+C4        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    78.7785    42.6720    0.0000  bottom
+C5        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    27.4320    26.8855   90.0000  bottom
+C6        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    12.7000    41.1095   90.0000  bottom
+C7        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    70.1040    40.6400    0.0000  bottom
+C8        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    66.0400    23.8375  270.0000  bottom
+C9        100n      C_1206_3216Metric_Pad1.33x1.80mm_HandSolder    78.1935    19.8120  180.0000  bottom
+R1        10k       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    22.8860    13.2080  180.0000  bottom
+R2        100       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    42.6460    22.3520  180.0000  bottom
+R3        10k       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    19.2780    49.7840  180.0000  bottom
+R4        10k       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    78.7400    46.7360    0.0000  bottom
+R5        10k       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    70.0780    36.5760    0.0000  bottom
+R7        27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    27.9400    80.2380  270.0000  bottom
+R8        27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    62.4840    81.3060  270.0000  bottom
+R9        27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    66.5480    81.3060  270.0000  bottom
+R10       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder     2.5400   108.6860   90.0000  bottom
+R11       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    12.7000    96.4940  270.0000  bottom
+R13       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    81.3060   103.1240  180.0000  bottom
+R14       100       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder     4.5720    86.3860  270.0000  bottom
+R16       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    36.0680   111.2520  270.0000  bottom
+R17       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    32.0040   111.2780  270.0000  bottom
+R18       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    86.8680   100.0760    0.0000  bottom
+R19       27        R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    82.2700   116.8400    0.0000  bottom
+R21       100       R_1210_3225Metric_Pad1.30x2.65mm_HandSolder    86.3600    87.3760  270.0000  bottom
+## End

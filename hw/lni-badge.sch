@@ -16,75 +16,75 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_01x04 J5
 U 1 1 60571487
-P 3900 1800
-F 0 "J5" H 3980 1792 50  0000 L CNN
-F 1 "I2C OLED 2" H 3980 1701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3900 1800 50  0001 C CNN
-F 3 "~" H 3900 1800 50  0001 C CNN
-	1    3900 1800
+P 4000 1450
+F 0 "J5" H 4080 1442 50  0000 L CNN
+F 1 "I2C OLED 2" H 4080 1351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4000 1450 50  0001 C CNN
+F 3 "~" H 4000 1450 50  0001 C CNN
+	1    4000 1450
 	1    0    0    -1  
 $EndComp
-Text Label 3400 1900 0    50   ~ 0
+Text Label 3500 1550 0    50   ~ 0
 I2C_SCL
-Text Label 3400 2000 0    50   ~ 0
+Text Label 3500 1650 0    50   ~ 0
 I2C_SDA
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 6057F981
-P 3900 1100
-F 0 "J3" H 3980 1092 50  0000 L CNN
-F 1 "I2C OLED 1" H 3980 1001 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3900 1100 50  0001 C CNN
-F 3 "~" H 3900 1100 50  0001 C CNN
-	1    3900 1100
+P 4000 900
+F 0 "J3" H 4080 892 50  0000 L CNN
+F 1 "I2C OLED 1" H 4080 801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4000 900 50  0001 C CNN
+F 3 "~" H 4000 900 50  0001 C CNN
+	1    4000 900 
 	1    0    0    -1  
 $EndComp
-Text Label 3400 1200 0    50   ~ 0
+Text Label 3500 1000 0    50   ~ 0
 I2C_SCL
-Text Label 3400 1300 0    50   ~ 0
+Text Label 3500 1100 0    50   ~ 0
 I2C_SDA
 $Comp
 L power:+5V #PWR024
 U 1 1 6058A5B7
-P 3400 1800
-F 0 "#PWR024" H 3400 1650 50  0001 C CNN
-F 1 "+5V" H 3415 1973 50  0000 C CNN
-F 2 "" H 3400 1800 50  0001 C CNN
-F 3 "" H 3400 1800 50  0001 C CNN
-	1    3400 1800
+P 3500 1450
+F 0 "#PWR024" H 3500 1300 50  0001 C CNN
+F 1 "+5V" H 3515 1623 50  0000 C CNN
+F 2 "" H 3500 1450 50  0001 C CNN
+F 3 "" H 3500 1450 50  0001 C CNN
+	1    3500 1450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+5V #PWR019
 U 1 1 605825DC
-P 3350 1100
-F 0 "#PWR019" H 3350 950 50  0001 C CNN
-F 1 "+5V" H 3365 1273 50  0000 C CNN
-F 2 "" H 3350 1100 50  0001 C CNN
-F 3 "" H 3350 1100 50  0001 C CNN
-	1    3350 1100
+P 3450 900
+F 0 "#PWR019" H 3450 750 50  0001 C CNN
+F 1 "+5V" H 3465 1073 50  0000 C CNN
+F 2 "" H 3450 900 50  0001 C CNN
+F 3 "" H 3450 900 50  0001 C CNN
+	1    3450 900 
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR020
 U 1 1 6059F212
-P 3500 1000
-F 0 "#PWR020" H 3500 750 50  0001 C CNN
-F 1 "GND" H 3505 827 50  0000 C CNN
-F 2 "" H 3500 1000 50  0001 C CNN
-F 3 "" H 3500 1000 50  0001 C CNN
-	1    3500 1000
+P 3600 800
+F 0 "#PWR020" H 3600 550 50  0001 C CNN
+F 1 "GND" H 3605 627 50  0000 C CNN
+F 2 "" H 3600 800 50  0001 C CNN
+F 3 "" H 3600 800 50  0001 C CNN
+	1    3600 800 
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 605A3161
-P 3500 1700
-F 0 "#PWR025" H 3500 1450 50  0001 C CNN
-F 1 "GND" H 3505 1527 50  0000 C CNN
-F 2 "" H 3500 1700 50  0001 C CNN
-F 3 "" H 3500 1700 50  0001 C CNN
-	1    3500 1700
+P 3600 1350
+F 0 "#PWR025" H 3600 1100 50  0001 C CNN
+F 1 "GND" H 3605 1177 50  0000 C CNN
+F 2 "" H 3600 1350 50  0001 C CNN
+F 3 "" H 3600 1350 50  0001 C CNN
+	1    3600 1350
 	0    1    1    0   
 $EndComp
 $Comp
@@ -185,17 +185,17 @@ Wire Wire Line
 Wire Wire Line
 	10350 4950 10500 4950
 Wire Wire Line
-	3350 1100 3700 1100
+	3450 900  3800 900 
 Wire Wire Line
-	3400 1800 3700 1800
+	3500 1450 3800 1450
 Wire Wire Line
-	3400 1900 3700 1900
+	3500 1550 3800 1550
 Wire Wire Line
-	3400 2000 3700 2000
+	3500 1650 3800 1650
 Wire Wire Line
-	3400 1200 3700 1200
+	3500 1000 3800 1000
 Wire Wire Line
-	3400 1300 3700 1300
+	3500 1100 3800 1100
 NoConn ~ 7900 5000
 NoConn ~ 7900 5800
 NoConn ~ 7400 5800
@@ -227,9 +227,9 @@ F 3 "~" H 9400 5700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3500 1000 3700 1000
+	3600 800  3800 800 
 Wire Wire Line
-	3500 1700 3700 1700
+	3600 1350 3800 1350
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 60696D20
@@ -441,9 +441,9 @@ Text Notes 7400 1000 0    50   ~ 0
 SPI Display 2
 Text Notes 8500 2950 0    50   ~ 0
 Programming header
-Text Notes 3450 900  0    50   ~ 0
+Text Notes 3550 700  0    50   ~ 0
 I2C Display 1
-Text Notes 3500 1550 0    50   ~ 0
+Text Notes 3550 1250 0    50   ~ 0
 I2C Display 2
 Text Notes 9550 700  0    50   ~ 0
 Expansion port 1
@@ -1760,4 +1760,180 @@ NoConn ~ 5300 6900
 NoConn ~ 5300 7000
 NoConn ~ 5300 7100
 NoConn ~ 5300 7200
+$Comp
+L Mechanical:MountingHole H15
+U 1 1 60E86512
+P 5350 2150
+F 0 "H15" H 5450 2150 50  0000 L CNN
+F 1 "MountingHole" H 5450 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 5350 2150 50  0001 C CNN
+F 3 "~" H 5350 2150 50  0001 C CNN
+	1    5350 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H16
+U 1 1 60E8B1A3
+P 5600 2150
+F 0 "H16" H 5700 2150 50  0000 L CNN
+F 1 "MountingHole" H 5700 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 5600 2150 50  0001 C CNN
+F 3 "~" H 5600 2150 50  0001 C CNN
+	1    5600 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H17
+U 1 1 60E8BAE0
+P 5850 2150
+F 0 "H17" H 5950 2150 50  0000 L CNN
+F 1 "MountingHole" H 5950 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 5850 2150 50  0001 C CNN
+F 3 "~" H 5850 2150 50  0001 C CNN
+	1    5850 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H18
+U 1 1 60E8C124
+P 6100 2150
+F 0 "H18" H 6200 2150 50  0000 L CNN
+F 1 "MountingHole" H 6200 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 6100 2150 50  0001 C CNN
+F 3 "~" H 6100 2150 50  0001 C CNN
+	1    6100 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H19
+U 1 1 60EF85AD
+P 7350 2150
+F 0 "H19" H 7450 2150 50  0000 L CNN
+F 1 "MountingHole" H 7450 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 7350 2150 50  0001 C CNN
+F 3 "~" H 7350 2150 50  0001 C CNN
+	1    7350 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H20
+U 1 1 60EF8BF5
+P 7600 2150
+F 0 "H20" H 7700 2150 50  0000 L CNN
+F 1 "MountingHole" H 7700 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 7600 2150 50  0001 C CNN
+F 3 "~" H 7600 2150 50  0001 C CNN
+	1    7600 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H21
+U 1 1 60EF8BFF
+P 7850 2150
+F 0 "H21" H 7950 2150 50  0000 L CNN
+F 1 "MountingHole" H 7950 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 7850 2150 50  0001 C CNN
+F 3 "~" H 7850 2150 50  0001 C CNN
+	1    7850 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H22
+U 1 1 60EF8C09
+P 8100 2150
+F 0 "H22" H 8200 2150 50  0000 L CNN
+F 1 "MountingHole" H 8200 2105 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 8100 2150 50  0001 C CNN
+F 3 "~" H 8100 2150 50  0001 C CNN
+	1    8100 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 60F47269
+P 3350 2200
+F 0 "H6" H 3450 2200 50  0000 L CNN
+F 1 "MountingHole" H 3450 2155 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3350 2200 50  0001 C CNN
+F 3 "~" H 3350 2200 50  0001 C CNN
+	1    3350 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H8
+U 1 1 60F47695
+P 3600 2200
+F 0 "H8" H 3700 2200 50  0000 L CNN
+F 1 "MountingHole" H 3700 2155 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3600 2200 50  0001 C CNN
+F 3 "~" H 3600 2200 50  0001 C CNN
+	1    3600 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H10
+U 1 1 60F4769F
+P 3850 2200
+F 0 "H10" H 3950 2200 50  0000 L CNN
+F 1 "MountingHole" H 3950 2155 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3850 2200 50  0001 C CNN
+F 3 "~" H 3850 2200 50  0001 C CNN
+	1    3850 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H12
+U 1 1 60F476A9
+P 4100 2200
+F 0 "H12" H 4200 2200 50  0000 L CNN
+F 1 "MountingHole" H 4200 2155 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 4100 2200 50  0001 C CNN
+F 3 "~" H 4100 2200 50  0001 C CNN
+	1    4100 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 60F5EF48
+P 3350 1900
+F 0 "H5" H 3450 1900 50  0000 L CNN
+F 1 "MountingHole" H 3450 1855 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3350 1900 50  0001 C CNN
+F 3 "~" H 3350 1900 50  0001 C CNN
+	1    3350 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H7
+U 1 1 60F5F264
+P 3600 1900
+F 0 "H7" H 3700 1900 50  0000 L CNN
+F 1 "MountingHole" H 3700 1855 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3600 1900 50  0001 C CNN
+F 3 "~" H 3600 1900 50  0001 C CNN
+	1    3600 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H9
+U 1 1 60F5F26E
+P 3850 1900
+F 0 "H9" H 3950 1900 50  0000 L CNN
+F 1 "MountingHole" H 3950 1855 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 3850 1900 50  0001 C CNN
+F 3 "~" H 3850 1900 50  0001 C CNN
+	1    3850 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H11
+U 1 1 60F5F278
+P 4100 1900
+F 0 "H11" H 4200 1900 50  0000 L CNN
+F 1 "MountingHole" H 4200 1855 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 4100 1900 50  0001 C CNN
+F 3 "~" H 4100 1900 50  0001 C CNN
+	1    4100 1900
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
