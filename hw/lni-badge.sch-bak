@@ -532,12 +532,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR029
 U 1 1 60ACE73D
-P 9250 1000
-F 0 "#PWR029" H 9250 750 50  0001 C CNN
-F 1 "GND" V 9150 900 50  0000 C CNN
-F 2 "" H 9250 1000 50  0001 C CNN
-F 3 "" H 9250 1000 50  0001 C CNN
-	1    9250 1000
+P 9150 1000
+F 0 "#PWR029" H 9150 750 50  0001 C CNN
+F 1 "GND" V 9050 900 50  0000 C CNN
+F 2 "" H 9150 1000 50  0001 C CNN
+F 3 "" H 9150 1000 50  0001 C CNN
+	1    9150 1000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -562,34 +562,28 @@ F 3 "~" H 9800 1100 50  0001 C CNN
 	1    9800 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 1000 9600 1000
 $Comp
 L power:+5V #PWR027
 U 1 1 60AD7715
-P 9200 1100
-F 0 "#PWR027" H 9200 950 50  0001 C CNN
-F 1 "+5V" V 9200 1300 50  0000 C CNN
-F 2 "" H 9200 1100 50  0001 C CNN
-F 3 "" H 9200 1100 50  0001 C CNN
-	1    9200 1100
+P 9200 1200
+F 0 "#PWR027" H 9200 1050 50  0001 C CNN
+F 1 "+5V" V 9200 1400 50  0000 C CNN
+F 2 "" H 9200 1200 50  0001 C CNN
+F 3 "" H 9200 1200 50  0001 C CNN
+	1    9200 1200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 60ADAC1D
-P 9400 1100
-F 0 "R10" V 9350 1250 50  0000 C CNN
-F 1 "27" V 9400 1050 50  0000 C CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 9330 1100 50  0001 C CNN
-F 3 "~" H 9400 1100 50  0001 C CNN
-	1    9400 1100
+P 9400 1200
+F 0 "R10" V 9350 1350 50  0000 C CNN
+F 1 "27" V 9400 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 9330 1200 50  0001 C CNN
+F 3 "~" H 9400 1200 50  0001 C CNN
+	1    9400 1200
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9200 1100 9250 1100
-Wire Wire Line
-	9550 1100 9600 1100
 $Comp
 L Device:R R11
 U 1 1 60AE0A09
@@ -684,12 +678,12 @@ DAC_1
 $Comp
 L power:GND #PWR031
 U 1 1 60B3A779
-P 9250 1800
-F 0 "#PWR031" H 9250 1550 50  0001 C CNN
-F 1 "GND" V 9150 1700 50  0000 C CNN
-F 2 "" H 9250 1800 50  0001 C CNN
-F 3 "" H 9250 1800 50  0001 C CNN
-	1    9250 1800
+P 9150 1800
+F 0 "#PWR031" H 9150 1550 50  0001 C CNN
+F 1 "GND" V 9050 1700 50  0000 C CNN
+F 2 "" H 9150 1800 50  0001 C CNN
+F 3 "" H 9150 1800 50  0001 C CNN
+	1    9150 1800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -714,34 +708,28 @@ F 3 "~" H 9800 1900 50  0001 C CNN
 	1    9800 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 1800 9600 1800
 $Comp
 L power:+5V #PWR028
 U 1 1 60B3AB1A
-P 9200 1900
-F 0 "#PWR028" H 9200 1750 50  0001 C CNN
-F 1 "+5V" V 9200 2100 50  0000 C CNN
-F 2 "" H 9200 1900 50  0001 C CNN
-F 3 "" H 9200 1900 50  0001 C CNN
-	1    9200 1900
+P 9200 2000
+F 0 "#PWR028" H 9200 1850 50  0001 C CNN
+F 1 "+5V" V 9200 2200 50  0000 C CNN
+F 2 "" H 9200 2000 50  0001 C CNN
+F 3 "" H 9200 2000 50  0001 C CNN
+	1    9200 2000
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R12
 U 1 1 60B3AB24
-P 9400 1900
-F 0 "R12" V 9350 2050 50  0000 C CNN
-F 1 "27" V 9400 1850 50  0000 C CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 9330 1900 50  0001 C CNN
-F 3 "~" H 9400 1900 50  0001 C CNN
-	1    9400 1900
+P 9400 2000
+F 0 "R12" V 9350 2150 50  0000 C CNN
+F 1 "27" V 9400 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 9330 2000 50  0001 C CNN
+F 3 "~" H 9400 2000 50  0001 C CNN
+	1    9400 2000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9200 1900 9250 1900
-Wire Wire Line
-	9550 1900 9600 1900
 $Comp
 L Device:R R13
 U 1 1 60B3AB3A
@@ -1020,32 +1008,6 @@ Wire Wire Line
 	10500 5650 10350 5650
 Text Label 10500 5650 0    50   ~ 0
 But_B
-$Comp
-L power:GND #PWR030
-U 1 1 60C367A6
-P 9250 1200
-F 0 "#PWR030" H 9250 950 50  0001 C CNN
-F 1 "GND" V 9250 950 50  0000 C CNN
-F 2 "" H 9250 1200 50  0001 C CNN
-F 3 "" H 9250 1200 50  0001 C CNN
-	1    9250 1200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9250 1200 9600 1200
-$Comp
-L power:GND #PWR032
-U 1 1 60C3D4D7
-P 9250 2000
-F 0 "#PWR032" H 9250 1750 50  0001 C CNN
-F 1 "GND" V 9250 1750 50  0000 C CNN
-F 2 "" H 9250 2000 50  0001 C CNN
-F 3 "" H 9250 2000 50  0001 C CNN
-	1    9250 2000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9250 2000 9600 2000
 NoConn ~ 10350 5550
 Wire Wire Line
 	10250 3600 10250 3450
@@ -1761,10 +1723,10 @@ NoConn ~ 5300 7000
 NoConn ~ 5300 7100
 NoConn ~ 5300 7200
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H15
 U 1 1 60E86512
 P 5350 2150
-F 0 "H?" H 5450 2150 50  0000 L CNN
+F 0 "H15" H 5450 2150 50  0000 L CNN
 F 1 "MountingHole" H 5450 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 5350 2150 50  0001 C CNN
 F 3 "~" H 5350 2150 50  0001 C CNN
@@ -1772,10 +1734,10 @@ F 3 "~" H 5350 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H16
 U 1 1 60E8B1A3
 P 5600 2150
-F 0 "H?" H 5700 2150 50  0000 L CNN
+F 0 "H16" H 5700 2150 50  0000 L CNN
 F 1 "MountingHole" H 5700 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 5600 2150 50  0001 C CNN
 F 3 "~" H 5600 2150 50  0001 C CNN
@@ -1783,10 +1745,10 @@ F 3 "~" H 5600 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H17
 U 1 1 60E8BAE0
 P 5850 2150
-F 0 "H?" H 5950 2150 50  0000 L CNN
+F 0 "H17" H 5950 2150 50  0000 L CNN
 F 1 "MountingHole" H 5950 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 5850 2150 50  0001 C CNN
 F 3 "~" H 5850 2150 50  0001 C CNN
@@ -1794,10 +1756,10 @@ F 3 "~" H 5850 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H18
 U 1 1 60E8C124
 P 6100 2150
-F 0 "H?" H 6200 2150 50  0000 L CNN
+F 0 "H18" H 6200 2150 50  0000 L CNN
 F 1 "MountingHole" H 6200 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 6100 2150 50  0001 C CNN
 F 3 "~" H 6100 2150 50  0001 C CNN
@@ -1805,10 +1767,10 @@ F 3 "~" H 6100 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H19
 U 1 1 60EF85AD
 P 7350 2150
-F 0 "H?" H 7450 2150 50  0000 L CNN
+F 0 "H19" H 7450 2150 50  0000 L CNN
 F 1 "MountingHole" H 7450 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 7350 2150 50  0001 C CNN
 F 3 "~" H 7350 2150 50  0001 C CNN
@@ -1816,10 +1778,10 @@ F 3 "~" H 7350 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H20
 U 1 1 60EF8BF5
 P 7600 2150
-F 0 "H?" H 7700 2150 50  0000 L CNN
+F 0 "H20" H 7700 2150 50  0000 L CNN
 F 1 "MountingHole" H 7700 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 7600 2150 50  0001 C CNN
 F 3 "~" H 7600 2150 50  0001 C CNN
@@ -1827,10 +1789,10 @@ F 3 "~" H 7600 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H21
 U 1 1 60EF8BFF
 P 7850 2150
-F 0 "H?" H 7950 2150 50  0000 L CNN
+F 0 "H21" H 7950 2150 50  0000 L CNN
 F 1 "MountingHole" H 7950 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 7850 2150 50  0001 C CNN
 F 3 "~" H 7850 2150 50  0001 C CNN
@@ -1838,10 +1800,10 @@ F 3 "~" H 7850 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H22
 U 1 1 60EF8C09
 P 8100 2150
-F 0 "H?" H 8200 2150 50  0000 L CNN
+F 0 "H22" H 8200 2150 50  0000 L CNN
 F 1 "MountingHole" H 8200 2105 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 8100 2150 50  0001 C CNN
 F 3 "~" H 8100 2150 50  0001 C CNN
@@ -1849,10 +1811,10 @@ F 3 "~" H 8100 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H6
 U 1 1 60F47269
 P 3350 2200
-F 0 "H?" H 3450 2200 50  0000 L CNN
+F 0 "H6" H 3450 2200 50  0000 L CNN
 F 1 "MountingHole" H 3450 2155 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3350 2200 50  0001 C CNN
 F 3 "~" H 3350 2200 50  0001 C CNN
@@ -1860,10 +1822,10 @@ F 3 "~" H 3350 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H8
 U 1 1 60F47695
 P 3600 2200
-F 0 "H?" H 3700 2200 50  0000 L CNN
+F 0 "H8" H 3700 2200 50  0000 L CNN
 F 1 "MountingHole" H 3700 2155 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3600 2200 50  0001 C CNN
 F 3 "~" H 3600 2200 50  0001 C CNN
@@ -1871,10 +1833,10 @@ F 3 "~" H 3600 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H10
 U 1 1 60F4769F
 P 3850 2200
-F 0 "H?" H 3950 2200 50  0000 L CNN
+F 0 "H10" H 3950 2200 50  0000 L CNN
 F 1 "MountingHole" H 3950 2155 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3850 2200 50  0001 C CNN
 F 3 "~" H 3850 2200 50  0001 C CNN
@@ -1882,10 +1844,10 @@ F 3 "~" H 3850 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H12
 U 1 1 60F476A9
 P 4100 2200
-F 0 "H?" H 4200 2200 50  0000 L CNN
+F 0 "H12" H 4200 2200 50  0000 L CNN
 F 1 "MountingHole" H 4200 2155 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 4100 2200 50  0001 C CNN
 F 3 "~" H 4100 2200 50  0001 C CNN
@@ -1893,10 +1855,10 @@ F 3 "~" H 4100 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H5
 U 1 1 60F5EF48
 P 3350 1900
-F 0 "H?" H 3450 1900 50  0000 L CNN
+F 0 "H5" H 3450 1900 50  0000 L CNN
 F 1 "MountingHole" H 3450 1855 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3350 1900 50  0001 C CNN
 F 3 "~" H 3350 1900 50  0001 C CNN
@@ -1904,10 +1866,10 @@ F 3 "~" H 3350 1900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H7
 U 1 1 60F5F264
 P 3600 1900
-F 0 "H?" H 3700 1900 50  0000 L CNN
+F 0 "H7" H 3700 1900 50  0000 L CNN
 F 1 "MountingHole" H 3700 1855 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3600 1900 50  0001 C CNN
 F 3 "~" H 3600 1900 50  0001 C CNN
@@ -1915,10 +1877,10 @@ F 3 "~" H 3600 1900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H9
 U 1 1 60F5F26E
 P 3850 1900
-F 0 "H?" H 3950 1900 50  0000 L CNN
+F 0 "H9" H 3950 1900 50  0000 L CNN
 F 1 "MountingHole" H 3950 1855 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 3850 1900 50  0001 C CNN
 F 3 "~" H 3850 1900 50  0001 C CNN
@@ -1926,14 +1888,40 @@ F 3 "~" H 3850 1900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H11
 U 1 1 60F5F278
 P 4100 1900
-F 0 "H?" H 4200 1900 50  0000 L CNN
+F 0 "H11" H 4200 1900 50  0000 L CNN
 F 1 "MountingHole" H 4200 1855 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.1mm" H 4100 1900 50  0001 C CNN
 F 3 "~" H 4100 1900 50  0001 C CNN
 	1    4100 1900
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	9200 1100 9200 1000
+Wire Wire Line
+	9200 1000 9600 1000
+Wire Wire Line
+	9200 1000 9150 1000
+Connection ~ 9200 1000
+Wire Wire Line
+	9200 1100 9600 1100
+Wire Wire Line
+	9550 1200 9600 1200
+Wire Wire Line
+	9250 1200 9200 1200
+Wire Wire Line
+	9550 2000 9600 2000
+Wire Wire Line
+	9200 2000 9250 2000
+Wire Wire Line
+	9200 1900 9200 1800
+Wire Wire Line
+	9200 1800 9600 1800
+Wire Wire Line
+	9200 1900 9600 1900
+Wire Wire Line
+	9200 1800 9150 1800
+Connection ~ 9200 1800
 $EndSCHEMATC
