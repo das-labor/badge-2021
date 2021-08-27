@@ -1,0 +1,3 @@
+[submodule "sw-demo/ST7789"]
+	path = sw-demo/ST7789
+	url = https://github.com/devbis/st7789py_mpy
