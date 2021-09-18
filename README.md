@@ -45,37 +45,26 @@ https://www.bastelgarage.ch/image/catalog/Artikel/420571-420580/420571-Pinout.jp
 The [ESP32 has VDET pins](https://www.esp32.com/viewtopic.php?t=187) which can
 be used for ADC.
 
-#### Joysticks
-
-PS2 joysticks and corresponding caps are [available from Amazon](
-https://www.amazon.de/-/en/Replacement-DualShock-Controller-Playstation-Screwdriver/dp/B07R7TM177/)
-and probably other sources as well.
-
-The Freetronics Kicad library [has a model for it](
-https://github.com/freetronics/freetronics_kicad_library/blob/master/freetronics_footprints.pretty/JOYSTICK_W_BUTTON.kicad_mod).
-
-They have two potentiometers for the two dimensions each, so we assign GPIO pins
-to them:
-
-| joystick 1 | joystick 2 |
-| ---------- | ---------- |
-| IO32, IO34 | IO33, IO35 |
-
-#### Buttons
-
-There are many suitable and colorful [6x6 buttons, tall and high](
-https://www.amazon.de/-/en/dp/B087R5XYJW/).
-With some PCB adjustment, larger [12x12 retro arcade style tactile
-push buttons](https://www.amazon.de/-/en/dp/B07WPBQXJ9) could fit.
-
 ### Firmware
 
 [MicroPython](https://micropython.org/download/esp32/)
+
+## Buttons
+
+There are many suitable and colorful [6x6 buttons, tall and high](
+https://www.amazon.de/-/en/dp/B087R5XYJW/), though not as nice to
+press. We went with the larger [12x12 retro arcade style tactile
+push buttons](https://www.amazon.de/-/en/dp/B07WPBQXJ9) instead.
 
 ## OLED I2C Display
 
 **Note**: On the back, we need to solder a bridge on *one* display
 in order to change its address, so we can use both on the same bus.
+
+The module is based on the SSD1306. See also the [data sheet](
+https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf) and
+![schematics for a similar design](
+https://cdn-learn.adafruit.com/assets/assets/000/093/884/original/adafruit_products_0-96in_OLED_sch.png).
 
 ### Buy
 
@@ -91,6 +80,24 @@ https://user-images.githubusercontent.com/33422878/37134592-383bf65a-22d4-11e8-8
 
 ![display back](
 https://user-images.githubusercontent.com/33422878/37134695-a056b0cc-22d4-11e8-8a5f-b13621fd9ad1.png)
+
+## Joysticks / Thumbsticks
+
+PS2 joysticks and corresponding caps are [available from Amazon](
+https://www.amazon.de/-/en/Replacement-DualShock-Controller-Playstation-Screwdriver/dp/B07R7TM177/)
+and probably other sources as well.
+
+The Freetronics Kicad library [has a model for it](
+https://github.com/freetronics/freetronics_kicad_library/blob/master/freetronics_footprints.pretty/JOYSTICK_W_BUTTON.kicad_mod).
+
+They have two potentiometers for the two dimensions each, so we assign GPIO pins
+to them:
+
+|  function  | left | right |
+| ---------- | ---- | ----- |
+|   X axis   | IO33 |  IO32 |
+|   Y axis   | IO34 |  IO35 |
+|   button   | IO5  |  IO12 |
 
 ## Other ESP32 Boards
 
