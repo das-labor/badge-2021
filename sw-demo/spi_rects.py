@@ -3,9 +3,90 @@
 # and
 # https://randomnerdtutorials.com/esp32-esp8266-analog-readings-micropython/
 
-from machine import Pin, ADC, SPI
-import time
+from machine import Pin, ADC, I2C, SPI
+from time import sleep, sleep_us
 from ST7735 import TFT, TFTColor
+import ssd1306
+
+# button_A = Pin(11, Pin.IN, Pin.PULL_UP)
+button_B = Pin(2, Pin.IN, Pin.PULL_UP)
+
+led = Pin(4, Pin.OUT)
+led_state = False
+
+print("I2C display scroller")
+# ESP32 Pin assignment
+i2c = I2C(-1, scl=Pin(22), sda=Pin(21))
+
+oled_width = 128
+oled_height = 64
+oled1 = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
+oled2 = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c, 0x3d)
+
+screen1 = [
+        [0, 10 , "== LNI  2021 =="],
+        [0, 42 , "woop woop woop!"]
+]
+screen2 = [
+        [0, 16, "> COViD sucks <"],
+        [0, 16, " pew! pew! pew!"]
+]
+screen3 = [
+        [0, 40, "|||||||||||||||"],
+        [0, 32, "-- Das Labor --"]
+]
+
+# Scroll in screen horizontally from left to right
+def scroll_in_screen(screen):
+  for i in range (0, oled_width+1, 4):
+    oled1.text(screen[0][2], -oled_width+i, screen[0][1])
+    oled2.text(screen[1][2], -oled_width+i, screen[1][1])
+    oled1.show()
+    oled2.show()
+    if i!= oled_width:
+      oled1.fill(0)
+      oled2.fill(0)
+
+# Scroll out screen horizontally from left to right
+def scroll_out_screen(speed):
+  for i in range ((oled_width+1)/speed):
+    for j in range (oled_height):
+      oled1.pixel(i, j, 0)
+    oled1.scroll(speed,0)
+    oled1.show()
+
+# Continuous horizontal scroll
+def scroll_screen_in_out(screen):
+  for i in range (0, (oled_width+4)/4, 1):
+    for line in screen:
+      oled1.text(line[2], -oled_width+i*8, line[1])
+    oled1.show()
+    if i<= oled_width/4:
+      oled1.fill(0)
+
+# Scroll in screen vertically
+def scroll_in_screen_v(screen):
+  for i in range (0, (oled_height+1), 1):
+    for line in screen:
+      oled1.text(line[2], line[0], -oled_height+i+line[1])
+    oled1.show()
+    if i!= oled_height:
+      oled1.fill(0)
+
+# Scroll out screen vertically
+def scroll_out_screen_v(speed):
+  for i in range ((oled_height+1)/speed):
+    for j in range (oled_width):
+      oled1.pixel(j, i, 0)
+    oled1.scroll(0,speed)
+    oled1.show()
+
+scroll_in_screen(screen2)
+sleep(2)
+scroll_out_screen(4)
+scroll_in_screen_v(screen3)
+sleep(2)
+scroll_out_screen_v(4)
 
 # joystick left horizontal
 jlh = ADC(Pin(33))
@@ -56,7 +137,6 @@ tft2.invertcolor(True)
 tft2.fill(TFT.BLACK)
 
 # tft1
-time.sleep_us(50000)
 tft1.rect([26,1], [80,160], TFT.PURPLE)
 tft1.fillrect([27,2], [20,20], TFTColor(42, 111, 123))
 tft1.fillrect([40,50], [25,15], TFT.RED)
@@ -65,7 +145,6 @@ tft1.fillrect([60,90], [25,15], TFT.GREEN)
 tft1.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
 
 # tft2
-time.sleep_us(50000)
 tft2.rect([26,1], [80,160], TFT.PURPLE)
 tft2.fillrect([27,2], [20,20], TFTColor(42, 111, 123))
 tft2.fillrect([40,50], [25,15], TFT.GREEN)
@@ -73,7 +152,7 @@ tft2.fillrect([50,70], [25,15], TFT.RED)
 tft2.fillrect([60,90], [25,15], TFT.BLUE)
 tft2.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
 
-time.sleep_us(500000)
+sleep_us(500000)
 
 # left pos and joystick offset
 xl = 50
@@ -124,4 +203,16 @@ while True:
       tft2.fill(TFT.BLACK)
       tft2.rect([26,1], [80,160], TFT.PURPLE)
       tft2.fillrect([xr,yr], [20,20], TFT.BLUE)
-  time.sleep_us(500)
+
+  # if not button_A.value():
+  #     print("Button A")
+  #     led_state = not led_state
+  #     led.value(1 if led_state else 0)
+
+  if not button_B.value():
+      print("Button B")
+      led_state = not led_state
+      led.value(1 if led_state else 0)
+      scroll_screen_in_out(screen1)
+
+  sleep_us(500)
