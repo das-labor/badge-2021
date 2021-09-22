@@ -49,6 +49,9 @@ be used for ADC.
 
 [MicroPython](https://micropython.org/download/esp32/)
 
+**NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
+you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
+
 ## Buttons
 
 There are many suitable and colorful [6x6 buttons, tall and high](
