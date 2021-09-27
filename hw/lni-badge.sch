@@ -999,13 +999,12 @@ Wire Wire Line
 Connection ~ 2100 1650
 Text Label 2450 1650 0    50   ~ 0
 But_B
-Text Label 6850 5800 0    50   ~ 0
+Text Label 10500 5650 0    50   ~ 0
 But_A
 Wire Wire Line
 	10500 5650 10350 5650
-Text Label 10500 5650 0    50   ~ 0
+Text Label 10500 5550 0    50   ~ 0
 But_B
-NoConn ~ 10350 5550
 Wire Wire Line
 	10250 3600 10250 3450
 Wire Wire Line
@@ -1517,21 +1516,6 @@ NC
 NoConn ~ 7400 5600
 Text Notes 7250 5650 0    50   ~ 0
 NC
-$Comp
-L Connector:TestPoint TP3
-U 1 1 60E5670F
-P 8100 4900
-F 0 "TP3" V 8150 4900 50  0000 C CNN
-F 1 "TestPoint" V 8204 4972 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8300 4900 50  0001 C CNN
-F 3 "~" H 8300 4900 50  0001 C CNN
-	1    8100 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7900 4900 8100 4900
-Text Notes 8300 4950 0    50   ~ 0
-RST
 Wire Wire Line
 	7900 5500 8250 5500
 Wire Wire Line
@@ -1923,5 +1907,7 @@ Wire Wire Line
 Connection ~ 9200 1800
 NoConn ~ 7400 5100
 Wire Wire Line
-	6850 5800 7400 5800
+	10350 5550 10500 5550
+NoConn ~ 7400 5800
+NoConn ~ 7900 4900
 $EndSCHEMATC
