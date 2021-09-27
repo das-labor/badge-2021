@@ -1,5 +1,9 @@
-ampy -p /dev/ttyUSB0 put boot.py
-ampy -p /dev/ttyUSB0 put ssd1306.py
-ampy -p /dev/ttyUSB0 put i2c_scroll.py
-ampy -p /dev/ttyUSB0 put ST7735.py
-ampy -p /dev/ttyUSB0 put spi_rects.py
+#!/bin/sh
+
+_PORT=/dev/ttyACM3
+
+ampy -p $_PORT put boot.py
+ampy -p $_PORT put ssd1306.py
+ampy -p $_PORT put i2c_scroll.py
+ampy -p $_PORT put ST7735.py
+ampy -p $_PORT put spi_rects.py

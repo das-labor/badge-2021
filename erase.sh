@@ -1,3 +1,3 @@
 #!/bin/sh
 
-esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
+esptool.py --chip esp32 erase_flash
