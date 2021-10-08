@@ -8,7 +8,7 @@ from time import sleep, sleep_us
 from ST7735 import TFT, TFTColor
 import ssd1306
 
-# button_A = Pin(11, Pin.IN, Pin.PULL_UP)
+button_A = Pin(0, Pin.IN, Pin.PULL_UP)
 button_B = Pin(2, Pin.IN, Pin.PULL_UP)
 
 led = Pin(4, Pin.OUT)
@@ -204,10 +204,10 @@ while True:
       tft2.rect([26,1], [80,160], TFT.PURPLE)
       tft2.fillrect([xr,yr], [20,20], TFT.BLUE)
 
-  # if not button_A.value():
-  #     print("Button A")
-  #     led_state = not led_state
-  #     led.value(1 if led_state else 0)
+  if not button_A.value():
+      print("Button A")
+      led_state = not led_state
+      led.value(1 if led_state else 0)
 
   if not button_B.value():
       print("Button B")
