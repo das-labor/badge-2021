@@ -211,8 +211,6 @@ while True:
 
   if not button_B.value():
       print("Button B")
-      led_state = not led_state
-      led.value(1 if led_state else 0)
       scroll_screen_in_out(screen1)
 
   sleep_us(500)
