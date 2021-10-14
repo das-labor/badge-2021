@@ -1,4 +1,4 @@
-# Badge Labortage/LNI 2021
+# Badge Labortage 2021
 
 ## Idea: based on Swag Badge
 
