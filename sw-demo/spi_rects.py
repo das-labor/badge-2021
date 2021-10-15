@@ -3,7 +3,7 @@
 # and
 # https://randomnerdtutorials.com/esp32-esp8266-analog-readings-micropython/
 
-from machine import Pin, ADC, I2C, SPI
+from machine import Pin, ADC, SoftI2C as I2C, SPI
 from time import sleep, sleep_us
 from ST7735 import TFT, TFTColor
 import ssd1306
@@ -16,7 +16,7 @@ led_state = False
 
 print("I2C display scroller")
 # ESP32 Pin assignment
-i2c = I2C(-1, scl=Pin(22), sda=Pin(21))
+i2c = I2C(scl=Pin(22), sda=Pin(21))
 
 oled_width = 128
 oled_height = 64
