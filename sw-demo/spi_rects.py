@@ -14,7 +14,6 @@ button_B = Pin(2, Pin.IN, Pin.PULL_UP)
 led = Pin(4, Pin.OUT)
 led_state = False
 
-print("I2C display scroller")
 # ESP32 Pin assignment
 i2c = I2C(scl=Pin(22), sda=Pin(21))
 
@@ -80,13 +79,6 @@ def scroll_out_screen_v(speed):
       oled1.pixel(j, i, 0)
     oled1.scroll(0,speed)
     oled1.show()
-
-scroll_in_screen(screen2)
-sleep(2)
-scroll_out_screen(4)
-scroll_in_screen_v(screen3)
-sleep(2)
-scroll_out_screen_v(4)
 
 # joystick left horizontal
 jlh = ADC(Pin(33))
@@ -165,6 +157,17 @@ xr = 50
 yr = 50
 hr_off = -195
 vr_off = -384
+
+def bootsplash():
+  print("I2C display scroller")
+  scroll_in_screen(screen2)
+  sleep(2)
+  scroll_out_screen(8)
+  scroll_in_screen_v(screen3)
+  sleep(2)
+  scroll_out_screen_v(8)
+
+bootsplash()
 
 while True:
   xrr = jrh.read() #
