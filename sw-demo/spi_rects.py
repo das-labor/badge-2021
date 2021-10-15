@@ -129,22 +129,15 @@ yr = 50
 hr_off = -195
 vr_off = -384
 
-def bootsplash():
-  print("I2C display scroller")
-  scroll_in_screen(screen2)
-  sleep(2)
-  scroll_out_screen(8)
-  scroll_in_screen_v(screen3)
-  sleep(2)
-  scroll_out_screen_v(8)
-
-bootsplash()
-init_tfts(tft1, tft2)
-tft_splash(tft1, tft2)
-
-sleep_us(500000)
-
-while True:
+def move_rects():
+  global xl
+  global yl
+  global hl_off
+  global vl_off
+  global xr
+  global yr
+  global hr_off
+  global vr_off
   xrr = jrh.read() #
   yrr = jrv.read() #
   xrd = (xrr - (2048 + hr_off)) / 100
@@ -181,6 +174,24 @@ while True:
       tft2.fill(TFT.BLACK)
       tft2.rect([26,1], [80,160], TFT.PURPLE)
       tft2.fillrect([xr,yr], [20,20], TFT.BLUE)
+
+def bootsplash():
+  print("I2C display scroller")
+  scroll_in_screen(screen2)
+  sleep(2)
+  scroll_out_screen(8)
+  scroll_in_screen_v(screen3)
+  sleep(2)
+  scroll_out_screen_v(8)
+
+bootsplash()
+init_tfts(tft1, tft2)
+tft_splash(tft1, tft2)
+
+sleep_us(500000)
+
+while True:
+  move_rects()
 
   if not button_A.value():
       print("Button A")
