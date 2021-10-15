@@ -1,3 +1,6 @@
 [submodule "sw-demo/ST7789"]
 	path = sw-demo/ST7789
 	url = https://github.com/devbis/st7789py_mpy
+[submodule "sw-demo/MQTT"]
+	path = sw-demo/MQTT
+	url = https://github.com/peterhinch/micropython-mqtt
