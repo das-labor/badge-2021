@@ -11,7 +11,9 @@
 # Public brokers https://github.com/mqtt/mqtt.github.io/wiki/public_brokers
 
 from machine import Pin
-from mqtt_as import MQTTClient, config
+from micropython_mqtt_as.mqtt_as import MQTTClient
+from micropython_mqtt_as.config import config
+#from mqtt_as import MQTTClient, config
 import uasyncio as asyncio
 
 # Define configuration
@@ -71,7 +73,7 @@ config['subs_cb'] = sub_cb
 config['connect_coro'] = conn_han
 config['wifi_coro'] = wifi_han
 MQTTClient.DEBUG = True  # Optional
-client = MQTTClient(config)
+client = MQTTClient(**config)
 
 loop.create_task(heartbeat())
 try:
