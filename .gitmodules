@@ -4,3 +4,6 @@
 [submodule "sw-demo/MQTT"]
 	path = sw-demo/MQTT
 	url = https://github.com/peterhinch/micropython-mqtt
+[submodule "sw-demo/mp-mqtt"]
+	path = sw-demo/mp-mqtt
+	url = https://github.com/kevinkk525/micropython-mqtt
