@@ -47,10 +47,35 @@ be used for ADC.
 
 ### Firmware
 
-[MicroPython](https://micropython.org/download/esp32/)
+Use the `erase.sh` script to clear the SPI flash and `flash.sh` script to flash:
+```
+./erase.sh
+./flash.sh firmware-image.bin
+```
 
 **NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
 you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
+
+#### [MicroPython](https://micropython.org/download/esp32/)
+
+It's in beta and we were having trouble getting MQTT and WiFi to work reliably.
+
+Use [`ampy`](https://github.com/scientifichackers/ampy) to upload scripts. On
+many OS distributions, you can find a package for it.
+
+#### [NodeMCU](https://nodemcu.readthedocs.io/en/dev-esp32/)
+
+The ESP32 variant is also still in beta, though may do better then MicroPython.
+We haven't tested it yet, but it does boot up thus far.
+
+Use [`nodemcu-tool`](https://github.com/AndiDittrich/NodeMCU-Tool) to upload
+scripts. If you are using Arch Linux, you can use the [package from the AUR](
+https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=nodemcu-tool). Otherwise,
+use the `PKGBUILD` as a reference for building it; mind that you may need to
+rebuild the native modules.
+
+Here is a [prebuilt image from the cloud build service](
+https://hostile.education/nodemcu-dev-esp32-13-modules-2021-10-17-00-22-29-float.bin).
 
 ## Buttons
 
