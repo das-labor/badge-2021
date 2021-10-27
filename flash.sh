@@ -7,5 +7,5 @@ esptool.py \
   --flash_mode dio \
   --flash_freq 40m \
   --flash_size 4MB \
-  -z 0x1000 \
+  -z 0x0000 \
   $@

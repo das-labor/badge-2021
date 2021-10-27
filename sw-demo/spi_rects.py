@@ -3,20 +3,20 @@
 # and
 # https://randomnerdtutorials.com/esp32-esp8266-analog-readings-micropython/
 
-from machine import Pin, ADC, I2C, SPI
+from machine import Pin, ADC, SoftI2C as I2C, SPI
 from time import sleep, sleep_us
-from ST7735 import TFT, TFTColor
+from ST7735 import TFT
 import ssd1306
+from tft import init_tfts, tft_splash
 
-# button_A = Pin(11, Pin.IN, Pin.PULL_UP)
+# ESP32 Pin assignment
+button_A = Pin(0, Pin.IN, Pin.PULL_UP)
 button_B = Pin(2, Pin.IN, Pin.PULL_UP)
 
 led = Pin(4, Pin.OUT)
 led_state = False
 
-print("I2C display scroller")
-# ESP32 Pin assignment
-i2c = I2C(-1, scl=Pin(22), sda=Pin(21))
+i2c = I2C(scl=Pin(22), sda=Pin(21))
 
 oled_width = 128
 oled_height = 64
@@ -81,13 +81,6 @@ def scroll_out_screen_v(speed):
     oled1.scroll(0,speed)
     oled1.show()
 
-scroll_in_screen(screen2)
-sleep(2)
-scroll_out_screen(4)
-scroll_in_screen_v(screen3)
-sleep(2)
-scroll_out_screen_v(4)
-
 # joystick left horizontal
 jlh = ADC(Pin(33))
 jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
@@ -111,7 +104,6 @@ jrv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 # is it any better?
 # spi = SPI(2, baudrate=20000000, sck=Pin(18), mosi=Pin(23), miso=Pin(19))
 
-print("SPI TFT display rectangles")
 spi = SPI(
    2,
    baudrate=24000000,
@@ -122,37 +114,8 @@ spi = SPI(
    miso=Pin(12)
 )
 
-# tft = TFT(spi, aDC=27, aReset=26, aCS=14)
 tft1 = TFT(spi, aDC=16, aReset=17, aCS=23)
 tft2 = TFT(spi, aDC=16, aReset=19, aCS=18)
-
-## init
-tft1.initr()
-tft1.rgb(True)
-tft1.invertcolor(True)
-tft1.fill(TFT.BLACK)
-tft2.initr()
-tft2.rgb(True)
-tft2.invertcolor(True)
-tft2.fill(TFT.BLACK)
-
-# tft1
-tft1.rect([26,1], [80,160], TFT.PURPLE)
-tft1.fillrect([27,2], [20,20], TFTColor(42, 111, 123))
-tft1.fillrect([40,50], [25,15], TFT.RED)
-tft1.fillrect([50,70], [25,15], TFT.BLUE)
-tft1.fillrect([60,90], [25,15], TFT.GREEN)
-tft1.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
-
-# tft2
-tft2.rect([26,1], [80,160], TFT.PURPLE)
-tft2.fillrect([27,2], [20,20], TFTColor(42, 111, 123))
-tft2.fillrect([40,50], [25,15], TFT.GREEN)
-tft2.fillrect([50,70], [25,15], TFT.RED)
-tft2.fillrect([60,90], [25,15], TFT.BLUE)
-tft2.fillrect([85,140], [20,20], TFTColor(123, 111, 42))
-
-sleep_us(500000)
 
 # left pos and joystick offset
 xl = 50
@@ -166,7 +129,15 @@ yr = 50
 hr_off = -195
 vr_off = -384
 
-while True:
+def move_rects():
+  global xl
+  global yl
+  global hl_off
+  global vl_off
+  global xr
+  global yr
+  global hr_off
+  global vr_off
   xrr = jrh.read() #
   yrr = jrv.read() #
   xrd = (xrr - (2048 + hr_off)) / 100
@@ -204,15 +175,31 @@ while True:
       tft2.rect([26,1], [80,160], TFT.PURPLE)
       tft2.fillrect([xr,yr], [20,20], TFT.BLUE)
 
-  # if not button_A.value():
-  #     print("Button A")
-  #     led_state = not led_state
-  #     led.value(1 if led_state else 0)
+def bootsplash():
+  print("I2C display scroller")
+  scroll_in_screen(screen2)
+  sleep(2)
+  scroll_out_screen(8)
+  scroll_in_screen_v(screen3)
+  sleep(2)
+  scroll_out_screen_v(8)
+
+bootsplash()
+init_tfts(tft1, tft2)
+tft_splash(tft1, tft2)
+
+sleep_us(500000)
+
+while True:
+  move_rects()
+
+  if not button_A.value():
+      print("Button A")
+      led_state = not led_state
+      led.value(1 if led_state else 0)
 
   if not button_B.value():
       print("Button B")
-      led_state = not led_state
-      led.value(1 if led_state else 0)
       scroll_screen_in_out(screen1)
 
   sleep_us(500)
