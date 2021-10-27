@@ -1,126 +1,126 @@
-# Complete project details at https://RandomNerdTutorials.com/micropython-ssd1306-oled-scroll-shapes-esp32-esp8266/
+# HW test sequence for badge-2021 REV 2
 
-from machine import Pin, I2C
-import ssd1306
+from machine import Pin
 from time import sleep
 
-print("I2C display scroller")
 
-# ESP32 Pin assignment
-i2c = I2C(-1, scl=Pin(22), sda=Pin(21))
+button_A = Pin(0, Pin.IN, Pin.PULL_UP)
+button_B = Pin(2, Pin.IN, Pin.PULL_UP)
 
-# ESP8266 Pin assignment
-#i2c = I2C(-1, scl=Pin(5), sda=Pin(4))
+led = Pin(4, Pin.OUT)
 
-oled_width = 128
-oled_height = 64
-oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
-oled2 = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c, 0x3d)
+dac_1 = Pin(26, Pin.OUT)
+dac_2 = Pin(25, Pin.OUT)
 
-screen1 = [
-        [0, 0 , "== LNI  2021 =="],
-        [0, 0 , "woop woop woop!"]
-]
-screen2 = [
-        [0, 16, "> COViD sucks <"],
-        [0, 16, " pew! pew! pew!"]
-]
-screen3 = [
-        [0, 40, "|||||||||||||||"],
-        [0, 32, "-- Das Labor --"]
-]
+i2c_sda = Pin(21, Pin.OUT)
+i2c_scl = Pin(22, Pin.OUT)
 
-# Scroll in screen horizontally from left to right
-def scroll_in_screen(screen):
-  for i in range (0, oled_width+1, 4):
-    oled.text(screen[0][2], -oled_width+i, screen[0][1])
-    oled2.text(screen[1][2], -oled_width+i, screen[1][1])
-    oled.show()
-    oled2.show()
-    if i!= oled_width:
-      oled.fill(0)
-      oled2.fill(0)
+spi_clk = Pin(14, Pin.OUT)
+spi_mosi = Pin(13, Pin.OUT)
 
-# Scroll out screen horizontally from left to right
-def scroll_out_screen(speed):
-  for i in range ((oled_width+1)/speed):
-    for j in range (oled_height):
-      oled.pixel(i, j, 0)
-    oled.scroll(speed,0)
-    oled.show()
+spi_cs_1 = Pin(23, Pin.OUT)
+spi_cs_2 = Pin(18, Pin.OUT)
 
-# Continuous horizontal scroll
-def scroll_screen_in_out(screen):
-  for i in range (0, (oled_width+1)*2, 1):
-    for line in screen:
-      oled.text(line[2], -oled_width+i, line[1])
-    oled.show()
-    if i!= oled_width:
-      oled.fill(0)
+disp_1_rst = Pin(17, Pin.OUT)
+disp_2_rst = Pin(19, Pin.OUT)
 
-# Scroll in screen vertically
-def scroll_in_screen_v(screen):
-  for i in range (0, (oled_height+1), 1):
-    for line in screen:
-      oled.text(line[2], line[0], -oled_height+i+line[1])
-    oled.show()
-    if i!= oled_height:
-      oled.fill(0)
-
-# Scroll out screen vertically
-def scroll_out_screen_v(speed):
-  for i in range ((oled_height+1)/speed):
-    for j in range (oled_width):
-      oled.pixel(j, i, 0)
-    oled.scroll(0,speed)
-    oled.show()
-
-# Continous vertical scroll
-def scroll_screen_in_out_v(screen):
-  for i in range (0, (oled_height*2+1), 1):
-    for line in screen:
-      oled.text(line[2], line[0], -oled_height+i+line[1])
-    oled.show()
-    oled.show()
-    if i!= oled_height:
-      oled.fill(0)
+j_button_A = Pin(5, Pin.OUT)
+j_button_B = Pin(12, Pin.OUT)
 
 def loop():
-# # Scroll in, stop, scroll out (horizontal)
-# scroll_in_screen(screen1)
-# sleep(2)
-# scroll_out_screen(4)
 
-  scroll_in_screen(screen2)
-  sleep(2)
-  scroll_out_screen(4)
+    print("START TEST")
 
-# scroll_in_screen(screen3)
-# sleep(2)
-# scroll_out_screen(4)
-
-# # Continuous horizontal scroll
-# scroll_screen_in_out(screen1)
-# scroll_screen_in_out(screen2)
-# scroll_screen_in_out(screen3)
-
-# # Scroll in, stop, scroll out (vertical)
-# scroll_in_screen_v(screen1)
-# sleep(2)
-# scroll_out_screen_v(4)
-
-# scroll_in_screen_v(screen2)
-# sleep(2)
-# scroll_out_screen_v(4)
-
-  scroll_in_screen_v(screen3)
-  sleep(2)
-  scroll_out_screen_v(4)
-
-# # Continuous verticall scroll
-# scroll_screen_in_out_v(screen1)
-# scroll_screen_in_out_v(screen2)
-# scroll_screen_in_out_v(screen3)
+    cnt = 0
 
 
+    # --- LOOP ---
+
+    while True:
+        if button_A.value() == 0:
+            if cnt > 0:
+                cnt = cnt-1
+
+        if button_B.value() == 0:
+            if cnt < 13:
+                cnt = cnt+1
+            
+        print("Counter:")
+        print(cnt)
+
+        # --- RESET GPIO ---
+        led.value(0)
+        
+        dac_1.value(0)
+        dac_2.value(0)
+        
+        i2c_sda.value(0)
+        i2c_scl.value(0)
+
+        spi_clk.value(0)
+        spi_mosi.value(0)
+        spi_cs_1.value(0)
+        spi_cs_2.value(0)
+
+        disp_1_rst.value(0)
+        disp_2_rst.value(0)
+
+        j_button_A.value(0)
+        j_button_B.value(0)
+
+        # --- Iterate through GPIO ---
+        if cnt == 1:
+            print("LED")
+            led.value(1)
+
+        if cnt == 2:
+            print("DAC 1")
+            dac_1.value(1)         
+
+        if cnt == 3:
+            print("DAC 2")
+            dac_2.value(1)
+        
+        if cnt == 4:
+            print("I2C SDA")
+            i2c_sda.value(1)
+
+        if cnt == 5:
+            print("I2C SCL")
+            i2c_scl.value(1)
+
+        if cnt == 6:
+            print("SPI CLK")
+            spi_clk.value(1)
+
+        if cnt == 7:
+            print("SPI MOSI")
+            spi_mosi.value(1)
+
+        if cnt == 8:
+            print("SPI CS 1")
+            spi_cs_1.value(1)
+
+        if cnt == 9:
+            print("SPI CS 2")
+            spi_cs_2.value(1)
+
+        if cnt == 10:
+            print("DISPLAY 1 RST")
+            disp_1_rst.value(1)
+
+        if cnt == 11:
+            print("DISPLAY 2 RST")
+            disp_2_rst.value(1)
+
+        if cnt == 12:
+            print("J Button A")
+            j_button_A.value(1)
+
+        if cnt == 13:
+            print("J Button B")
+            j_button_B.value(1)
+            
+        sleep(1)
+    
 loop()
