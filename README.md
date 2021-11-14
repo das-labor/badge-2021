@@ -1,5 +1,7 @@
 # Badge Labortage 2021
 
+![assembled badge](img/badge-lt21.jpg)
+
 ## Idea: based on Swag Badge
 
 The idea for this year's Labor badge is based on the Swag Badge from the
