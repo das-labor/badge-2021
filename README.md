@@ -76,7 +76,8 @@ https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=nodemcu-tool). Otherwise,
 use the `PKGBUILD` as a reference for building it; mind that you may need to
 rebuild the native modules.
 
-Here is a [prebuilt image from the cloud build service](
+Follow the [build instructions](https://nodemcu.readthedocs.io/en/dev-esp32/build/)
+for full customization or use a [prebuilt image from the cloud build service](
 https://hostile.education/nodemcu-dev-esp32-13-modules-2021-10-17-00-22-29-float.bin).
 
 ## Buttons
