@@ -80,6 +80,16 @@ Follow the [build instructions](https://nodemcu.readthedocs.io/en/dev-esp32/buil
 for full customization or use a [prebuilt image from the cloud build service](
 https://hostile.education/nodemcu-dev-esp32-13-modules-2021-10-17-00-22-29-float.bin).
 
+#### 9p support
+
+Try out [a small libstyx implementation suitable for use on ESP32](
+https://github.com/bhgv/listyx2-9p-C-lib-and-plugins).
+
+**TODO**: See if you can wire it up with [`cpu`](
+https://github.com/u-root/cpu) to enable speedier driver development,
+e.g., using a related ESP32 board with an ethernet port, or attach
+one to the badge even.
+
 ## Buttons
 
 There are many suitable and colorful [6x6 buttons, tall and high](
