@@ -34,6 +34,14 @@ See the [schematics](hw/schematics.pdf) for details.
 The data sheet and documentation for the ESP32-WROOM-32 is [publicly available](
 https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf).
 
+### Further Documents
+
+- [all technical docs](https://www.espressif.com/en/support/documents/technical-documents)
+- [ESP32 technical reference manual](
+  https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf)
+- [ESP32 general datasheet](
+  https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+
 ### Buy
 
 [https://www.az-delivery.de/products/esp32-d1-mini](
