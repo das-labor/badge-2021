@@ -58,6 +58,10 @@ Use the `erase.sh` script to clear the SPI flash and `flash.sh` script to flash:
 **NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
 you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
 
+#### [das-labor/badge-2021-rs](https://github.com/das-labor/badge-2021)
+
+We have started to write our own bare firmware in Rust. :crab:
+
 #### [MicroPython](https://micropython.org/download/esp32/)
 
 It's in beta and we were having trouble getting MQTT and WiFi to work reliably.
@@ -67,8 +71,8 @@ many OS distributions, you can find a package for it.
 
 #### [NodeMCU](https://nodemcu.readthedocs.io/en/dev-esp32/)
 
-The ESP32 variant is also still in beta, though may do better then MicroPython.
-We haven't tested it yet, but it does boot up thus far.
+The ESP32 variant is also still in beta on NodeMCU, though may do better than MicroPython.
+We haven't tested it too much yet, but it does boot up thus far and MQTT worked okay.
 
 Use [`nodemcu-tool`](https://github.com/AndiDittrich/NodeMCU-Tool) to upload
 scripts. If you are using Arch Linux, you can use the [package from the AUR](
