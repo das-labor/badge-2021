@@ -58,9 +58,11 @@ Use the `erase.sh` script to clear the SPI flash and `flash.sh` script to flash:
 **NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
 you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
 
-#### [das-labor/badge-2021-rs](https://github.com/das-labor/badge-2021)
+#### [das-labor/badge-2021-rs](https://github.com/das-labor/badge-2021-rs)
 
 We have started to write our own bare firmware in Rust. :crab:
+
+It is non-std and based on [esp-rs](https://esp-rs.github.io/book/).
 
 #### [MicroPython](https://micropython.org/download/esp32/)
 
