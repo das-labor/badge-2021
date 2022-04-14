@@ -6,7 +6,7 @@
 
 The idea for this year's Labor badge is based on the Swag Badge from the
 [Open Hardware Miniconf at linux.conf.au 2021](
-https://linux.conf.au/programme/miniconfs/open-hardware/).
+http://www.openhardwareconf.org/wiki/SwagBadge2021).
 
 ![Swag badge](
 http://www.openhardwareconf.org/images/thumb/e/e7/Swag_badge_render_2020-09-30.jpg/360px-Swag_badge_render_2020-09-30.jpg)
