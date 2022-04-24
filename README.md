@@ -55,13 +55,30 @@ https://www.bastelgarage.ch/image/catalog/Artikel/420571-420580/420571-Pinout.jp
 The [ESP32 has VDET pins](https://www.esp32.com/viewtopic.php?t=187) which can
 be used for ADC.
 
+#### MH-ET LIVE MiniKit
+
+**NOTE**: At Labortage 2021, we sold badges with the MH-ET LIVE MiniKit, because
+it was a cheap option and easily available, unlike the otherwise preferred board
+"ESP32 D1 Mini NodeMCU". It has some quirks, but is generally fine to use.
+
+- [forum with resources overview](
+https://forum.mhetlive.com/topic/8/mh-et-live-minikit-for-esp32)
+- [repo with sample files for Arduino](
+https://github.com/MHEtLive/ESP32-MINI-KIT)
+- [issue: schematics not fully accurate](
+https://github.com/MHEtLive/ESP32-MINI-KIT/issues/3)
+- [issue: RX/TX in top right are swapped](
+https://github.com/MHEtLive/ESP32-MINI-KIT/issues/7)
+
 ### Firmware
 
-Use the `erase.sh` script to clear the SPI flash and `flash.sh` script to flash:
+Use the `Makefile` to clear the SPI flash and write an image to it:
+
+```sh
+make FW=firmware-image.bin erase flash
 ```
-./erase.sh
-./flash.sh firmware-image.bin
-```
+
+You can pass down parameters. For further options, please look at `Maefile`.
 
 **NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
 you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
@@ -110,6 +127,8 @@ There are many suitable and colorful [6x6 buttons, tall and high](
 https://www.amazon.de/-/en/dp/B087R5XYJW/), though not as nice to
 press. We went with the larger [12x12 retro arcade style tactile
 push buttons](https://www.amazon.de/-/en/dp/B07WPBQXJ9) instead.
+
+We have routed the buttons to the pins `IO0` and `IO2`.
 
 ## OLED I2C Display
 
