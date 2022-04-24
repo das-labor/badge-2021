@@ -81,6 +81,10 @@ def scroll_out_screen_v(speed):
     oled1.scroll(0,speed)
     oled1.show()
 
+# joystick buttons
+jbtn_A = Pin(5, Pin.IN, Pin.PULL_UP)
+jbtn_B = Pin(12, Pin.IN, Pin.PULL_UP)
+
 # joystick left horizontal
 jlh = ADC(Pin(33))
 jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
@@ -194,12 +198,18 @@ while True:
   move_rects()
 
   if not button_A.value():
-      print("Button A")
+      print("Tactile Button A")
       led_state = not led_state
       led.value(1 if led_state else 0)
 
   if not button_B.value():
-      print("Button B")
+      print("Tactile Button B")
       scroll_screen_in_out(screen1)
+
+  if not jbtn_A.value():
+      print("Joystick Button A")
+
+  if not jbtn_B.value():
+      print("Joystick Button B")
 
   sleep_us(500)
