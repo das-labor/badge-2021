@@ -34,6 +34,8 @@ See the [schematics](hw/schematics.pdf) for details.
 The data sheet and documentation for the ESP32-WROOM-32 is [publicly available](
 https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf).
 
+It includes schematics and application notes.
+
 ### Further Documents
 
 - [all technical docs](https://www.espressif.com/en/support/documents/technical-documents)
@@ -60,6 +62,9 @@ be used for ADC.
 **NOTE**: At Labortage 2021, we sold badges with the MH-ET LIVE MiniKit, because
 it was a cheap option and easily available, unlike the otherwise preferred board
 "ESP32 D1 Mini NodeMCU". It has some quirks, but is generally fine to use.
+
+We have bridged button B (right) to GPIO0, so you can press it for flashing or
+otherwise triggering the "boot option" as described in the WROOM-32 datasheet.
 
 - [forum with resources overview](
 https://forum.mhetlive.com/topic/8/mh-et-live-minikit-for-esp32)
