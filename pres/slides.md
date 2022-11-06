@@ -24,6 +24,10 @@ Not the canned food kind of DIY.
 
 . . .
 
+More involved than IKEA.
+
+. . .
+
 You really have to **do** things!
 
 ### Soldering the D1 Mini
