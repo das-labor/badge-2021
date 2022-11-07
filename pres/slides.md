@@ -36,16 +36,16 @@ You really have to **do** things!
 
 :::::::::::::: {.columns}
 ::: {.column width="60%"}
-... a gamepad.
+... a gamepad[^1].
 
-![Stadia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Stadia_Controller.jpg/640px-Google_Stadia_Controller.jpg){ width=60% }
+![Stadia](img/640px-Google_Stadia_Controller.jpg){ width=60% }
 :::
 ::: {.column width="40%"}
 . . .
 
-... a handheld console.
+... a handheld console[^2].
 
-![Game Boy](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/396px-Game-Boy-FL.jpg){ width=60% }
+![Game Boy](img/396px-Game-Boy-FL.jpg){ width=60% }
 :::
 ::::::::::::::
 
@@ -57,6 +57,11 @@ play with it, or turn it into a gadget of your liking.
 For example, you can program it to be a Bluetooth gamepad:
 [https://github.com/lemmingDev/ESP32-BLE-Gamepad](
 https://github.com/lemmingDev/ESP32-BLE-Gamepad)
+
+[^1]: [https://en.wikipedia.org/wiki/Google_Stadia](
+https://en.wikipedia.org/wiki/Google_Stadia)
+[^2]: [https://en.wikipedia.org/wiki/Game_Boy](
+https://en.wikipedia.org/wiki/Game_Boy)
 
 ### Soldering the D1 Mini
 
