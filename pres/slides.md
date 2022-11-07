@@ -30,6 +30,34 @@ More involved than IKEA.
 
 You really have to **do** things!
 
+### It looks like...
+
+. . .
+
+:::::::::::::: {.columns}
+::: {.column width="60%"}
+... a gamepad.
+
+![Stadia](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Stadia_Controller.jpg/640px-Google_Stadia_Controller.jpg){ width=60% }
+:::
+::: {.column width="40%"}
+. . .
+
+... a handheld console.
+
+![Game Boy](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/396px-Game-Boy-FL.jpg){ width=60% }
+:::
+::::::::::::::
+
+. . .
+
+Yes! We designed the board so that it would fit well in your hands, you could
+play with it, or turn it into a gadget of your liking.
+
+For example, you can program it to be a Bluetooth gamepad:
+[https://github.com/lemmingDev/ESP32-BLE-Gamepad](
+https://github.com/lemmingDev/ESP32-BLE-Gamepad)
+
 ### Soldering the D1 Mini
 
 ,,,
