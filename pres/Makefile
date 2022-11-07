@@ -1,7 +1,7 @@
 all:
 	pandoc \
 		-t beamer \
-		--pdf-engine=xelatex \
+		--pdf-engine=lualatex \
 		--template=template.latex \
 		-fmarkdown-implicit_figures \
 		-V fontfamily="sourcesanspro" \

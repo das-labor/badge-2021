@@ -51,6 +51,7 @@ $if(background-image1)$
 }
 $endif$
 \usepackage{pgfpages}
+\usepackage{emoji}
 \definecolor{color1}{RGB}{68, 68, 68}
 \definecolor{color2}{RGB}{125, 125, 121}
 \definecolor{color3}{RGB}{23, 150, 238}

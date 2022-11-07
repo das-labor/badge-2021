@@ -86,9 +86,25 @@ Python, but for MCUs...
 
 Lua....
 
-### Rust
+### Rust \emoji{crab}
 
-because :crab:
+:::::::::::::: {.columns}
+::: {.column width="16%"}
+![Rust](img/rust.png){ height=22% }
+:::
+::: {.column width="25%"}
+![Ferris](img/ferris.png){ height=25% }
+:::
+::::::::::::::
+
+Espressif are actively working on Rust support themselves.
+
+They are involved and engaging in the Embedded Rust community, and reachable via
+the [esp-rs Matrix channel](https://matrix.to/#/#esp-rs:matrix.org).
+
+[https://github.com/das-labor/badge-2021-rs](
+https://github.com/das-labor/badge-2021-rs)
+
 
 ## Extensions
 
