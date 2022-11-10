@@ -16,24 +16,24 @@ title: Labor Badge 2021
 
 . . .
 
-We designed the badge to be DIY.
+We designed the badge to be DIY. \emoji{raising-hands}
 
 . . .
 
-Not the canned food kind of DIY.
+Not the canned food kind of DIY. \emoji{canned-food}
 
 . . .
 
-More involved than IKEA.
+More involved than IKEA. \emoji{screwdriver}
 
 . . .
 
-You really have to **do** things!
+You really have to **do** things! \emoji{mechanic}
 
 . . .
 
 We provide high level documentation, schematics, board design, example code, and
-references.
+references, as well as pixel graphics.
 
 [https://github.com/das-labor/badge-2021
 ](https://github.com/das-labor/badge-2021)
@@ -220,4 +220,9 @@ In the top left and right are 2x4 pin headers for extension with I2C, GPIO, 5V,
 
 In the top middle area are a host of unrouted pins, which can be used for
 prototyping. You can solder anything, attach wires to other pins on the badge,
-get fully creative. \emoji{partying-face}
+get fully creative. \emoji{artist}
+
+. . .
+
+Get together, hands on the boards, dive into schematics and manuals, and most
+importantly: have fun! \emoji{partying-face}
