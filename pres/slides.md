@@ -99,11 +99,11 @@ https://en.wikipedia.org/wiki/Game_Boy)
 
 . . .
 
+The D1-Mini has 2x10 pin rows on both sides.
+
 We offer soldering stations, and we sell USB soldering irons.
 
 Ask for help, and other Labor folks will gladly assist. :)
-
-The D1-Mini has 2x10 pins rows on both sides.
 
 ## Where does my button go?
 
