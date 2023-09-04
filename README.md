@@ -121,6 +121,8 @@ https://hostile.education/nodemcu-dev-esp32-13-modules-2021-10-17-00-22-29-float
 Try out [a small libstyx implementation suitable for use on ESP32](
 https://github.com/bhgv/listyx2-9p-C-lib-and-plugins).
 
+See also the more recent [NinePea](https://github.com/echoline/NinePea).
+
 **TODO**: See if you can wire it up with [`cpu`](
 https://github.com/u-root/cpu) to enable speedier driver development,
 e.g., using a related ESP32 board with an ethernet port, or attach
