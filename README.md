@@ -15,6 +15,30 @@ They also released a DIY version named [Dag Badge](
 http://www.openhardwareconf.org/wiki/Swagbadge2021_Dagbadge) as well as the
 [Swag Badge schematics](https://github.com/CCHS-Melbourne/Swag-Badge).
 
+## What?
+
+You can do [fun things](https://mastodon.social/@CyReVolt/106513500102546977)
+with this badge.
+We made a basic kit as we sell it, with optional extras.
+
+This is in part for educational purposes, so people can try different things,
+e.g., discover that I2C needs different addresses or separate buses vs SPI
+being controlled via active low _select_ pins.
+The top area has holes for prototyping, not connected to anything.
+
+### Basic kit
+
+- power and system LEDs
+- 2 OLED screens on I2C (top)
+- 2 buttons
+- double pin rows + ESP32 D1 mini board
+
+### Extras
+
+- 2 color screens on SPI
+- 2 thumb sticks with buttons and x,y axis
+- 2 expansion ports with I2C and DAC-capable GPIOs (top left+right)
+
 ## PCB
 
 This is our own PCB design. We will offer a basic kit with the PCB itself, the
