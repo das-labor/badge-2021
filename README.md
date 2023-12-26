@@ -107,7 +107,7 @@ Use the `Makefile` to clear the SPI flash and write an image to it:
 make FW=firmware-image.bin erase flash
 ```
 
-You can pass down parameters. For further options, please look at `Maefile`.
+You can pass down parameters. For further options, please look at `Makefile`.
 
 **NOTE: One common board is the MH-ET LIVE ESP32 MiniKit. In order to flash it,
 you need to short `GPIO0` to `GND` and use the assigned /dev/ttyACM{n} device.**
