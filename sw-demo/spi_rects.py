@@ -92,7 +92,7 @@ jlh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 jlv = ADC(Pin(34))
 jlv.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 
-# joystick right horinzontal
+# joystick right horizontal
 jrh = ADC(Pin(32))
 jrh.atten(ADC.ATTN_11DB)       #Full range: 3.3v
 # joystick right vertical
